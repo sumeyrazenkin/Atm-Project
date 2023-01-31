@@ -68,7 +68,7 @@
    <widget class="QPushButton" name="csmainwdw_btn_returnmain">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>90</x>
       <y>500</y>
       <width>131</width>
       <height>41</height>
@@ -86,7 +86,7 @@
    <widget class="QPushButton" name="csmainwdw_btn_exit">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>260</x>
       <y>500</y>
       <width>131</width>
       <height>41</height>
@@ -105,7 +105,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>90</y>
+      <y>120</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -123,7 +123,7 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>90</y>
+      <y>120</y>
       <width>171</width>
       <height>31</height>
      </rect>
@@ -238,7 +238,7 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>370</y>
+      <y>410</y>
       <width>301</width>
       <height>51</height>
      </rect>
@@ -255,17 +255,34 @@
    <widget class="QLabel" name="csmainwdw_lbl_resultmessage">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>80</x>
       <y>310</y>
       <width>311</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(212, 239, 220);</string>
+    </property>
     <property name="text">
-     <string>Successful withdrawal !</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="csmainwdw_lbl_CSinfo">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>371</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Müşteri bilgileri</string>
     </property>
    </widget>
   </widget>
@@ -312,6 +329,22 @@
     <hint type="destinationlabel">
      <x>199</x>
      <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>csmainwdw_btn_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>customer_main_window</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>371</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>565</y>
     </hint>
    </hints>
   </connection>
