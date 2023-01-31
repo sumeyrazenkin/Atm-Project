@@ -1,10 +1,7 @@
 #3 main class ?
 
 class User:
-    def __init__(self):
-        pass
-class Bank:
-    def __init__(self):
+    def __init__(self, ID, password):
         pass
     def check_balance(self):
         pass
@@ -17,4 +14,6 @@ class Bank:
 
 class Admin:
     def __init__(self):
+        pass
+    def createcustomer(self):
         pass
