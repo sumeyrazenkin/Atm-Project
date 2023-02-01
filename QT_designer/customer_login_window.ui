@@ -148,6 +148,22 @@
      <string>Exit</string>
     </property>
    </widget>
+   <widget class="QLabel" name="csloginwdw_lbl_warning">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>300</y>
+      <width>211</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 38, 0);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -162,5 +178,22 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>csloginwdw_btn_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>customer_login_window</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>565</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

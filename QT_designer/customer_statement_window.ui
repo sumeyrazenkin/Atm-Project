@@ -50,7 +50,7 @@
    <widget class="QPushButton" name="csstatementwdw_btn_returnmain">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>40</x>
       <y>500</y>
       <width>131</width>
       <height>41</height>
@@ -68,7 +68,7 @@
    <widget class="QPushButton" name="csstatementwdw_btn_exit">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>320</x>
       <y>500</y>
       <width>131</width>
       <height>41</height>
@@ -142,6 +142,24 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="csstatementwdw_btn_returnmain_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>500</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Customer Page</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -156,5 +174,22 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>csstatementwdw_btn_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>customer_statement_window</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>387</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>570</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
