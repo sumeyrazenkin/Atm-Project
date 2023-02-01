@@ -6,27 +6,28 @@ class CSMain(QMainWindow, Ui_customer_main_window):
     def __init__(self):
         super(CSMain, self).__init__()
         self.setupUi(self)
-        # self.csmainwdw_lbl_balanceshow.text(f"{self.balanceshow} €")
-        self.amount = int(self.csmainwdw_spinbox_money.text())
-        self.balance = int(self.csmainwdw_lbl_balanceshow.text())
+        self.balance = 0
 
+        self.update_balance_display()
+        self.amount = int(self.csmainwdw_spinbox_money.value())
+        
         self.csmainwdw_btn_getcash.clicked.connect(self.get_cash)
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
     
-    def get_cash(self):
-        pass
+    def update_balance_display(self):
+        self.csmainwdw_lbl_balanceshow.setText(f"{str(self.balance)} €")
 
     def deposit(self):
-        self.balance += self.amount
-        print(self.balance)
-        # self.balance.show()
-        
+        self.balance += self.csmainwdw_spinbox_money.value()
+        self.csmainwdw_lbl_resultmessage.setText("Successful deposit to the account..")
+        self.update_balance_display()
 
-        "deneme"
-
+    def get_cash(self):
+        self.balance -= self.csmainwdw_spinbox_money.value()
+        self.csmainwdw_lbl_resultmessage.setText("Successful withdraw from the account..")
+        self.update_balance_display()
 
 if __name__ == "__main__":
-
     app = QApplication(sys.argv)
     csmainwindow = CSMain()
     widget = QtWidgets.QStackedWidget()
