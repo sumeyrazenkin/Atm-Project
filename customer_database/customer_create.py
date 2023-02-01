@@ -1,5 +1,5 @@
 import json
-file = "customers.json"
+file = "customer_database\customers.json"
 def add_customer():
     customers = {}
     with open (file, "r") as f:

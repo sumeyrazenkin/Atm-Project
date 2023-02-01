@@ -61,6 +61,10 @@ class Ui_admin_window(object):
         font.setPointSize(18)
         self.adminwdw_btn_exit.setFont(font)
         self.adminwdw_btn_exit.setObjectName("adminwdw_btn_exit")
+        self.adminwdw_lbl_warning = QtWidgets.QLabel(self.centralwidget)
+        self.adminwdw_lbl_warning.setGeometry(QtCore.QRect(140, 300, 211, 16))
+        self.adminwdw_lbl_warning.setStyleSheet("color: rgb(255, 38, 0);")
+        self.adminwdw_lbl_warning.setObjectName("adminwdw_lbl_warning")
         admin_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(admin_window)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
@@ -71,6 +75,7 @@ class Ui_admin_window(object):
         admin_window.setStatusBar(self.statusbar)
 
         self.retranslateUi(admin_window)
+        self.adminwdw_btn_exit.clicked.connect(admin_window.close)
         QtCore.QMetaObject.connectSlotsByName(admin_window)
 
     def retranslateUi(self, admin_window):
@@ -82,3 +87,4 @@ class Ui_admin_window(object):
         self.adminwdw_btn_login.setText(_translate("admin_window", "LOGIN"))
         self.adminwdw_btn_returnmain.setText(_translate("admin_window", "Main Window"))
         self.adminwdw_btn_exit.setText(_translate("admin_window", "Exit"))
+        self.adminwdw_lbl_warning.setText(_translate("admin_window", "TextLabel"))
