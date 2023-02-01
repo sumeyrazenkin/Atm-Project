@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_admin_window(object):
-    def setupUi(self, admin_window):
-        admin_window.setObjectName("admin_window")
-        admin_window.resize(480, 600)
-        self.centralwidget = QtWidgets.QWidget(admin_window)
+class Ui_admin_CScreate_window(object):
+    def setupUi(self, admin_CScreate_window):
+        admin_CScreate_window.setObjectName("admin_CScreate_window")
+        admin_CScreate_window.resize(480, 600)
+        self.centralwidget = QtWidgets.QWidget(admin_CScreate_window)
         self.centralwidget.setObjectName("centralwidget")
         self.admincswdw_lbl_heading = QtWidgets.QLabel(self.centralwidget)
         self.admincswdw_lbl_heading.setGeometry(QtCore.QRect(80, 40, 321, 61))
@@ -92,29 +92,35 @@ class Ui_admin_window(object):
         self.admincswdw_spinBox_balance.setMaximum(10000)
         self.admincswdw_spinBox_balance.setSingleStep(100)
         self.admincswdw_spinBox_balance.setObjectName("admincswdw_spinBox_balance")
-        admin_window.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(admin_window)
+        self.admincswdw_lbl_result = QtWidgets.QLabel(self.centralwidget)
+        self.admincswdw_lbl_result.setGeometry(QtCore.QRect(120, 440, 241, 16))
+        self.admincswdw_lbl_result.setStyleSheet("background-color: rgb(146, 144, 0);")
+        self.admincswdw_lbl_result.setText("")
+        self.admincswdw_lbl_result.setAlignment(QtCore.Qt.AlignCenter)
+        self.admincswdw_lbl_result.setObjectName("admincswdw_lbl_result")
+        admin_CScreate_window.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(admin_CScreate_window)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
         self.menubar.setObjectName("menubar")
-        admin_window.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(admin_window)
+        admin_CScreate_window.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(admin_CScreate_window)
         self.statusbar.setObjectName("statusbar")
-        admin_window.setStatusBar(self.statusbar)
+        admin_CScreate_window.setStatusBar(self.statusbar)
 
-        self.retranslateUi(admin_window)
-        self.admincswdw_btn_exit.clicked.connect(admin_window.close)
-        QtCore.QMetaObject.connectSlotsByName(admin_window)
+        self.retranslateUi(admin_CScreate_window)
+        self.admincswdw_btn_exit.clicked.connect(admin_CScreate_window.close)
+        QtCore.QMetaObject.connectSlotsByName(admin_CScreate_window)
 
-    def retranslateUi(self, admin_window):
+    def retranslateUi(self, admin_CScreate_window):
         _translate = QtCore.QCoreApplication.translate
-        admin_window.setWindowTitle(_translate("admin_window", "Admin Window"))
-        self.admincswdw_lbl_heading.setText(_translate("admin_window", "Creating Customer Account"))
-        self.admincswdw_lbl_ADid.setText(_translate("admin_window", "Customer ID:"))
-        self.admincswdw_btn_create.setText(_translate("admin_window", "CREATE CUSTOMER"))
-        self.admincswdw_btn_returnmain.setText(_translate("admin_window", "Main Window"))
-        self.admincswdw_btn_exit.setText(_translate("admin_window", "Exit"))
-        self.admincswdw_lbl_name.setText(_translate("admin_window", "Name:"))
-        self.admincswdw_lbl_password.setText(_translate("admin_window", "Password:"))
-        self.admincswdw_lbl_email.setText(_translate("admin_window", "Email:"))
-        self.admincswdw_lbl_balance.setText(_translate("admin_window", "Current Balance:"))
-        self.admincswdw_spinBox_balance.setSuffix(_translate("admin_window", "  €"))
+        admin_CScreate_window.setWindowTitle(_translate("admin_CScreate_window", "Admin Window"))
+        self.admincswdw_lbl_heading.setText(_translate("admin_CScreate_window", "Creating Customer Account"))
+        self.admincswdw_lbl_ADid.setText(_translate("admin_CScreate_window", "Customer ID:"))
+        self.admincswdw_btn_create.setText(_translate("admin_CScreate_window", "CREATE CUSTOMER"))
+        self.admincswdw_btn_returnmain.setText(_translate("admin_CScreate_window", "Main Window"))
+        self.admincswdw_btn_exit.setText(_translate("admin_CScreate_window", "Exit"))
+        self.admincswdw_lbl_name.setText(_translate("admin_CScreate_window", "Name:"))
+        self.admincswdw_lbl_password.setText(_translate("admin_CScreate_window", "Password:"))
+        self.admincswdw_lbl_email.setText(_translate("admin_CScreate_window", "Email:"))
+        self.admincswdw_lbl_balance.setText(_translate("admin_CScreate_window", "Current Balance:"))
+        self.admincswdw_spinBox_balance.setSuffix(_translate("admin_CScreate_window", "  €"))
