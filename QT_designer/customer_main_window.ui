@@ -143,8 +143,15 @@
      <string notr="true">color: rgb(212, 239, 220);
 background-color: rgb(223, 195, 245);</string>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(212, 239, 220);
+background-color: rgb(223, 195, 245);</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhDigitsOnly</set>
+    </property>
     <property name="text">
-     <string/>
+     <string>0 €</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
