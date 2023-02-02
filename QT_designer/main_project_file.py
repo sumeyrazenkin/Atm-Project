@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import *
 import sys
 from Ui_main_window import *
 from Ui_admin_window import *
-import json
+import json , csv
 from Ui_admin_createCS_window import *
 
 class Main_Window(QMainWindow, Ui_open_window):
@@ -55,7 +55,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             customers = {}
             with open (file, "r") as f:
                 pyfile = json.load(f)
-            customers["Customer_ID"] = int(CustomerID)
+            customers["Customer_ID"] = CustomerID
             customers["Name"] = Name
             customers["Email"] = Email
             customers["Password"] = Password
@@ -64,8 +64,11 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         
             with open (file, "w") as f:
                 json.dump(pyfile, f, indent=2)
-            with open(f'QT_designer\\customer_database\\{customers["Customer_ID"]}_statement.json',"w") as x:
-                json.load(x)             
+            with open(f'QT_designer\\customer_database\\{CustomerID}_statement.csv',"w", newline="\n") as x:
+                statement = csv.writer(x)
+                statement.writerow(["Customer_ID",'Transactions'])
+                statement.writerow([CustomerID,CurrentBalance])
+
                 
 
 
