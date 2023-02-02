@@ -59,12 +59,14 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             customers["Name"] = Name
             customers["Email"] = Email
             customers["Password"] = Password
-            customers["Current Balance"] = CurrentBalance
+            customers["Current Balance"] = CurrentBalance 
             pyfile.append(customers)
         
             with open (file, "w") as f:
                 json.dump(pyfile, f, indent=2)
-
+            with open(f'QT_designer\\customer_database\\{customers["Customer_ID"]}_statement.json',"w") as x:
+                json.load(x)             
+                
 
 
 
