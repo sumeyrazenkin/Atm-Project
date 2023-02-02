@@ -19,5 +19,19 @@
     "Email": "musabsari@gmail.com",
     "Password": "3123",
     "Current Balance": "200  \u20ac"
+  },
+  {
+    "Customer_ID": "171",
+    "Name": "m",
+    "Email": "k",
+    "Password": "171",
+    "Current Balance": "250  \u20ac"
+  },
+  {
+    "Customer_ID": "0",
+    "Name": "mel",
+    "Email": "mel",
+    "Password": "0",
+    "Current Balance": "500  \u20ac"
   }
 ]
