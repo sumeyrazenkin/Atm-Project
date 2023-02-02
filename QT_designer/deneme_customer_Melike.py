@@ -40,7 +40,7 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
             file = r"QT_designer/customer_database/customers.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
-            if CsId == pyfile["Customer_ID"] and CsPs == pyfile["Password"]:
+            if CsId == pyfile[0]["Customer_ID"] and CsPs == pyfile[0]["Password"]:
                 print("Successfully logged in")
                 self.csAfter = CSMain()
                 widget.addWidget(self.csAfter)
