@@ -33,5 +33,26 @@
     "Email": "mel",
     "Password": "0",
     "Current Balance": "500  \u20ac"
+  },
+  {
+    "Customer_ID": "9",
+    "Name": "kl",
+    "Email": "kl",
+    "Password": "9",
+    "Current Balance": "200  \u20ac"
+  },
+  {
+    "Customer_ID": "8",
+    "Name": "li",
+    "Email": "li",
+    "Password": "8",
+    "Current Balance": "520  \u20ac"
+  },
+  {
+    "Customer_ID": "7",
+    "Name": "uy",
+    "Email": "uy",
+    "Password": "7",
+    "Current Balance": "600  \u20ac"
   }
 ]
