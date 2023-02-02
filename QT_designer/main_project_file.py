@@ -30,7 +30,7 @@ class ADPreLogin(QMainWindow, Ui_admin_window):
             file = r"QT_designer\AdminLogInfo\admin.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
-            if AdminID == pyfile[0]["adminID"] and ADpassword == pyfile[0]["adpassword"]:
+            if AdminID == pyfile[0]["adminID"] and ADpassword == pyfile[0]["adpassword"]: #buraya bir for dongusu yazilarak baska adminler icin giris yapilmasi saglanabilir.
                 print("Successfully logged in")
                 self.adminAfter = ADAfterLogin()
                 widget.addWidget(self.adminAfter)
@@ -43,6 +43,30 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
     def __init__(self):
         super(ADAfterLogin, self).__init__()
         self.setupUi(self)
+        self.admincswdw_btn_create.clicked.connect(self.createcustomer)
+    def createcustomer(self):
+        CustomerID = self.admincswdw_linedit_CSid.text()
+        Name = self.admincswdw_linedit_name.text()
+        Email = self.admincswdw_linedit_email.text()
+        Password = self.admincswdw_linedit_CSpassword_2.text()
+        CurrentBalance = self.admincswdw_spinBox_balance.text()
+        if CustomerID and Name and Email and Password:
+            file = "QT_designer\customer_database\customers.json"
+            customers = {}
+            with open (file, "r") as f:
+                pyfile = json.load(f)
+            customers["Customer_ID"] = int(CustomerID)
+            customers["Name"] = Name
+            customers["Email"] = Email
+            customers["Password"] = Password
+            customers["Current Balance"] = CurrentBalance 
+            pyfile.append(customers)
+        
+            with open (file, "w") as f:
+                json.dump(pyfile, f, indent=2)
+            with open(f'QT_designer\\customer_database\\{customers["Customer_ID"]}_statement.json',"w") as x:
+                json.load(x)             
+                
 
 
 

@@ -58,8 +58,6 @@ class Ui_customer_main_window(object):
         font = QtGui.QFont()
         font.setPointSize(18)
         self.csmainwdw_lbl_balanceshow.setFont(font)
-        self.csmainwdw_lbl_balanceshow.setStyleSheet("color: rgb(212, 239, 220);\n"
-"background-color: rgb(223, 195, 245);")
         self.csmainwdw_lbl_balanceshow.setText("")
         self.csmainwdw_lbl_balanceshow.setTextFormat(QtCore.Qt.AutoText)
         self.csmainwdw_lbl_balanceshow.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
@@ -102,8 +100,6 @@ class Ui_customer_main_window(object):
         self.csmainwdw_btn_statement.setObjectName("csmainwdw_btn_statement")
         self.csmainwdw_lbl_resultmessage = QtWidgets.QLabel(self.centralwidget)
         self.csmainwdw_lbl_resultmessage.setGeometry(QtCore.QRect(80, 310, 311, 31))
-        self.csmainwdw_lbl_resultmessage.setStyleSheet("\n"
-"background-color: rgb(212, 239, 220);")
         self.csmainwdw_lbl_resultmessage.setText("")
         self.csmainwdw_lbl_resultmessage.setAlignment(QtCore.Qt.AlignCenter)
         self.csmainwdw_lbl_resultmessage.setObjectName("csmainwdw_lbl_resultmessage")
