@@ -98,12 +98,14 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
             self.csloginwdw_lbl_warning.setText("Please fill the required fields!")
         else:
             file = r"QT_designer\customer_database\customers.json"
+
             with open (file, "r") as f:
                 pyfile = json.load(f)
             for customer in pyfile:    
                 if CsId in customer["Customer_ID"] and CsPs in customer["Password"]:
                     print("Successfully logged in")
-                    self.csAfter = CSAfterLogin()
+                    self.csAfter = CSMain()
+
                     widget.addWidget(self.csAfter)
                     widget.setCurrentIndex(widget.currentIndex()+1)
                     self.csAfter.show()
@@ -113,10 +115,12 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
     def close_l(self):
         sys.exit            
 
+
 class CSAfterLogin(QMainWindow, Ui_customer_main_window):
     def __init__(self):
         super(CSAfterLogin, self).__init__()
         self.setupUi(self)
+
 
 class CSMain(QMainWindow, Ui_customer_main_window):
     def __init__(self):

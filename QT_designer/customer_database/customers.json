@@ -1,0 +1,23 @@
+[
+  {
+    "Customer_ID": "123",
+    "Name": "Musab",
+    "Email": "musabsari@gmail.com",
+    "Password": "12345",
+    "Current Balance": 0.0
+  },
+  {
+    "Customer_ID": "12",
+    "Name": "Melike",
+    "Email": "melike@gmail.com",
+    "Password": "1234",
+    "Current Balance": 0.0
+  },
+  {
+    "Customer_ID": "12",
+    "Name": "musab",
+    "Email": "musabsari@gmail.com",
+    "Password": "3123",
+    "Current Balance": "200  \u20ac"
+  }
+]
