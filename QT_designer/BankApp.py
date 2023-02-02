@@ -37,25 +37,26 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
         if len(CsId) == 0 or CsPs == 0:
             self.csloginwdw_lbl_warning.setText("Please fill the required fields!")
         else:
-            file = r"QT_designer/customer_database/customers.json"
+            file = r"QT_designer\customer_database\customers.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
-            if CsId == pyfile[0]["Customer_ID"] and CsPs == pyfile[0]["Password"]:
-                print("Successfully logged in")
-                self.csAfter = CSMain()
-                widget.addWidget(self.csAfter)
-                widget.setCurrentIndex(widget.currentIndex()+1)
-                self.csAfter.show()
-            else:
-                self.csloginwdw_lbl_warning.setText("Invalid ID or Password!")
+            for customer in pyfile:    
+                if CsId in customer["Customer_ID"] and CsPs in customer["Password"]:
+                    print("Successfully logged in")
+                    self.csAfter = CSAfterLogin()
+                    widget.addWidget(self.csAfter)
+                    widget.setCurrentIndex(widget.currentIndex()+1)
+                    self.csAfter.show()
+                else:
+                    self.csloginwdw_lbl_warning.setText("Invalid ID or Password!")
 
     def close_l(self):
         sys.exit            
 
-# class CSAfterLogin(QMainWindow, Ui_customer_main_window):
-#     def __init__(self):
-#         super(CSAfterLogin, self).__init__()
-#         self.setupUi(self)
+class CSAfterLogin(QMainWindow, Ui_customer_main_window):
+    def __init__(self):
+        super(CSAfterLogin, self).__init__()
+        self.setupUi(self)
 
 class CSMain(QMainWindow, Ui_customer_main_window):
     def __init__(self):
