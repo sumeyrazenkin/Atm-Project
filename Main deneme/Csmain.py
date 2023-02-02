@@ -25,9 +25,11 @@ class CSMain(QMainWindow, Ui_customer_main_window):
     def get_cash(self):
         if self.balance >= self.csmainwdw_spinbox_money.value():
             self.balance -= self.csmainwdw_spinbox_money.value()
+            self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
             self.csmainwdw_lbl_resultmessage.setText("Successful withdraw from the account..")
             self.update_balance_display()
         else:
+            self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
             self.csmainwdw_lbl_resultmessage.setText("Non-sufficient funds in the account..")
 
 if __name__ == "__main__":
