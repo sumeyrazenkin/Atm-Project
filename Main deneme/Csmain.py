@@ -19,6 +19,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
 
     def deposit(self):
         self.balance += self.csmainwdw_spinbox_money.value()
+        self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
         self.csmainwdw_lbl_resultmessage.setText("Successful deposit to the account..")
         self.update_balance_display()
 
