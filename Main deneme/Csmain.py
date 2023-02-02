@@ -15,7 +15,8 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         self.csmainwdw_btn_getcash.clicked.connect(self.get_cash)
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
         # self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
-        # self.csmainwdw_lbl_CSinfo.text(self.show_CSinfo)
+        # self.csmainwdw_lbl_CSinfo.setText(self.show_CSinfo)
+        # self.show_CSinfo
     
     def update_balance_display(self):
         self.csmainwdw_lbl_balanceshow.setText(f"{str(self.balance)} €")
@@ -59,7 +60,8 @@ class CSMain(QMainWindow, Ui_customer_main_window):
     #         data = json.load(file)
     #     name = data["Name"]
     #     csID = data["Customer_ID"]
-    #     return f"You've reached {name}'s acount. Customer ID: {csID}"
+    #     # self.csmainwdw_lbl_CSinfo.setText(name, csID)
+    #     return (f"You've reached {name}'s acount. Customer ID: {csID}")
         
 
         
