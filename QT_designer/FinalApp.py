@@ -129,12 +129,8 @@ class CSMain(QMainWindow, Ui_customer_main_window):
 
         self.csmainwdw_btn_getcash.clicked.connect(self.get_cash)
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
-<<<<<<< Updated upstream
-        self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
-=======
 
-        # self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
->>>>>>> Stashed changes
+        self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
         # self.csmainwdw_lbl_CSinfo.setText(self.show_CSinfo)
         # self.show_CSinfo
         
@@ -186,6 +182,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         else:
             self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
             self.csmainwdw_lbl_resultmessage.setText("Please enter a positif amount..")
+    
     def add_statement(self):
         self.csstatement = CSinfo()
         widget.addWidget(self.csstatement)
