@@ -2,12 +2,16 @@ from PyQt5.QtWidgets import *
 import sys
 from Ui_main_window import *
 from Ui_customer_login_window import *
-import json, csv
+import json, csv, datetime
 from Ui_customer_main_window import *
 from Ui_admin_createCS_window import *
 from Ui_admin_window import *
+<<<<<<< Updated upstream
 import datetime
 from Ui_customer_statement_window import *
+=======
+
+>>>>>>> Stashed changes
 class Main_Window(QMainWindow, Ui_open_window):
     def __init__(self):
         super(Main_Window, self).__init__()
@@ -119,26 +123,41 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         super(CSMain, self).__init__()
         self.setupUi(self)
         
-        self.balance = 0
+        # self.balance = int(self.csmainwdw_lbl_balanceshow.value())
         self.update_balance_display()
         self.amount = int(self.csmainwdw_spinbox_money.value())
 
         self.csmainwdw_btn_getcash.clicked.connect(self.get_cash)
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
+<<<<<<< Updated upstream
         self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
+=======
+
+        # self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
+>>>>>>> Stashed changes
         # self.csmainwdw_lbl_CSinfo.setText(self.show_CSinfo)
         # self.show_CSinfo
         
         
     
     def update_balance_display(self):
-        self.csmainwdw_lbl_balanceshow.setText(f"{str(self.balance)} €")
+        # self.csmainwdw_lbl_balanceshow.setText(f"{str(self.balance)} €")
+
         # file = f"QT_designer/customer_database/{CsLogin.CsId}.csv"
         # with open (file) as f:
         #     reader = csv.reader(file)
         #     for row in reader:
         #         balance = row[1]
 
+        with open (f"{CsLogin.CsId}.csv", 'r') as infile:
+            reader = csv. reader(infile)
+            header = next (reader)
+            for row in reader:
+                self.balance = row[3]
+                print(self.balance)
+
+
+        
 
     def deposit(self):
         if self.csmainwdw_spinbox_money.value() > 0:
