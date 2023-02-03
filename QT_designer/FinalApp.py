@@ -7,7 +7,7 @@ from Ui_customer_main_window import *
 from Ui_admin_createCS_window import *
 from Ui_admin_window import *
 import datetime
-
+from Ui_customer_statement_window import *
 class Main_Window(QMainWindow, Ui_open_window):
     def __init__(self):
         super(Main_Window, self).__init__()
@@ -125,7 +125,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
 
         self.csmainwdw_btn_getcash.clicked.connect(self.get_cash)
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
-        # self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
+        self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
         # self.csmainwdw_lbl_CSinfo.setText(self.show_CSinfo)
         # self.show_CSinfo
         
@@ -167,9 +167,19 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         else:
             self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
             self.csmainwdw_lbl_resultmessage.setText("Please enter a positif amount..")
+    def add_statement(self):
+        self.csstatement = CSinfo()
+        widget.addWidget(self.csstatement)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        self.csstatement.show()
 
-
-
+class CSinfo(QMainWindow, Ui_customer_statement_window):
+    def __init__(self):
+        super(CSinfo, self).__init__()
+        self.setupUi(self)
+        
+        
+        
 if __name__ == "__main__":
 
     app = QApplication(sys.argv)
