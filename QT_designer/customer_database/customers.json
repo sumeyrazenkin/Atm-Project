@@ -54,5 +54,47 @@
     "Email": "uy",
     "Password": "7",
     "Current Balance": "600  \u20ac"
+  },
+  {
+    "Customer_ID": "111",
+    "Name": "yu",
+    "Email": "yu",
+    "Password": "111",
+    "Current Balance": "400  \u20ac"
+  },
+  {
+    "Customer_ID": "111",
+    "Name": "yu",
+    "Email": "yu",
+    "Password": "111",
+    "Current Balance": "400  \u20ac"
+  },
+  {
+    "Customer_ID": "34",
+    "Name": "op",
+    "Email": "op",
+    "Password": "34",
+    "Current Balance": "400  \u20ac"
+  },
+  {
+    "Customer_ID": "56",
+    "Name": "ty",
+    "Email": "ty",
+    "Password": "56",
+    "Current Balance": "400  \u20ac"
+  },
+  {
+    "Customer_ID": "90",
+    "Name": "op",
+    "Email": "op",
+    "Password": "90",
+    "Current Balance": "700  \u20ac"
+  },
+  {
+    "Customer_ID": "89",
+    "Name": "u\u0131",
+    "Email": "u\u0131",
+    "Password": "89",
+    "Current Balance": "900  \u20ac"
   }
 ]

@@ -297,5 +297,85 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>admincswdw_btn_create</sender>
+   <signal>clicked()</signal>
+   <receiver>admincswdw_linedit_CSid</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>201</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>admincswdw_btn_create</sender>
+   <signal>clicked()</signal>
+   <receiver>admincswdw_linedit_CSpassword_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>admincswdw_btn_create</sender>
+   <signal>clicked()</signal>
+   <receiver>admincswdw_linedit_name</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>admincswdw_btn_create</sender>
+   <signal>clicked()</signal>
+   <receiver>admincswdw_linedit_email</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>287</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>admincswdw_btn_create</sender>
+   <signal>clicked()</signal>
+   <receiver>admincswdw_spinBox_balance</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>419</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>352</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
 </ui>
