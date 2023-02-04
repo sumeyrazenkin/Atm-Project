@@ -91,7 +91,7 @@
      </rect>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <enum>QLineEdit::Normal</enum>
     </property>
    </widget>
    <widget class="QPushButton" name="admincswdw_btn_returnmain">
@@ -235,7 +235,7 @@
      </rect>
     </property>
     <property name="suffix">
-     <string>  €</string>
+     <string>€</string>
     </property>
     <property name="prefix">
      <string/>
@@ -257,7 +257,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(146, 144, 0);</string>
+     <string notr="true">background-color: rgb(251, 246, 195);</string>
     </property>
     <property name="text">
      <string/>

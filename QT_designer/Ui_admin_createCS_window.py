@@ -41,7 +41,7 @@ class Ui_admin_CScreate_window(object):
         self.admincswdw_linedit_CSid.setObjectName("admincswdw_linedit_CSid")
         self.admincswdw_linedit_name = QtWidgets.QLineEdit(self.centralwidget)
         self.admincswdw_linedit_name.setGeometry(QtCore.QRect(50, 230, 161, 31))
-        self.admincswdw_linedit_name.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.admincswdw_linedit_name.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.admincswdw_linedit_name.setObjectName("admincswdw_linedit_name")
         self.admincswdw_btn_returnmain = QtWidgets.QPushButton(self.centralwidget)
         self.admincswdw_btn_returnmain.setGeometry(QtCore.QRect(90, 490, 131, 41))
@@ -94,7 +94,7 @@ class Ui_admin_CScreate_window(object):
         self.admincswdw_spinBox_balance.setObjectName("admincswdw_spinBox_balance")
         self.admincswdw_lbl_result = QtWidgets.QLabel(self.centralwidget)
         self.admincswdw_lbl_result.setGeometry(QtCore.QRect(120, 440, 241, 16))
-        self.admincswdw_lbl_result.setStyleSheet("background-color: rgb(146, 144, 0);")
+        self.admincswdw_lbl_result.setStyleSheet("background-color: rgb(251, 246, 195);")
         self.admincswdw_lbl_result.setText("")
         self.admincswdw_lbl_result.setAlignment(QtCore.Qt.AlignCenter)
         self.admincswdw_lbl_result.setObjectName("admincswdw_lbl_result")
@@ -108,6 +108,12 @@ class Ui_admin_CScreate_window(object):
         admin_CScreate_window.setStatusBar(self.statusbar)
 
         self.retranslateUi(admin_CScreate_window)
+        self.admincswdw_btn_exit.clicked.connect(admin_CScreate_window.close) # type: ignore
+        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_CSid.clear) # type: ignore
+        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_CSpassword_2.clear) # type: ignore
+        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_name.clear) # type: ignore
+        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear) # type: ignore
+        self.admincswdw_btn_create.clicked.connect(self.admincswdw_spinBox_balance.clear) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(admin_CScreate_window)
 
     def retranslateUi(self, admin_CScreate_window):
@@ -122,4 +128,4 @@ class Ui_admin_CScreate_window(object):
         self.admincswdw_lbl_password.setText(_translate("admin_CScreate_window", "Password:"))
         self.admincswdw_lbl_email.setText(_translate("admin_CScreate_window", "Email:"))
         self.admincswdw_lbl_balance.setText(_translate("admin_CScreate_window", "Current Balance:"))
-        self.admincswdw_spinBox_balance.setSuffix(_translate("admin_CScreate_window", "  €"))
+        self.admincswdw_spinBox_balance.setSuffix(_translate("admin_CScreate_window", "€"))
