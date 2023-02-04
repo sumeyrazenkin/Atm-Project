@@ -102,23 +102,23 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
         #self.csloginwdw_btn_returnmain.clicked.connect(Ui_customer_login_window.close)
 
     def csafterlogin(self):
-        CsId = self.csloginwdw_linedit_ADid.text()  
-        CsPs = self.csloginwdw_linedit_ADpassword.text() 
-        if len(CsId) == 0 or CsPs == 0:
+        self.CsId = self.csloginwdw_linedit_ADid.text()  
+        self.CsPs = self.csloginwdw_linedit_ADpassword.text() 
+        if len(self.CsId) == 0 or len(self.CsPs) == 0:
             self.csloginwdw_lbl_warning.setText("Please fill the required fields!")
         else:
             file = r"QT_designer/customer_database/customers.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
             for customer in pyfile:    
-                if CsId in customer["Customer_ID"] and CsPs in customer["Password"]:
+                if self.CsId in customer["Customer_ID"] and self.CsPs in customer["Password"]:
                     print("Successfully logged in")
                     self.csAfter = CSMain()
                     widget.addWidget(self.csAfter)
                     widget.setCurrentIndex(widget.currentIndex()+1)
                     self.csAfter.show()
-                    self.csAfter.csmainwdw_lbl_CSinfo.setText(customer["Customer_ID"])
-                    self.csAfter.csmainwdw_lbl_balanceshow.setText((customer["Current Balance"]))
+                    self.csAfter.csmainwdw_lbl_CSname_show.setText(customer["Customer_ID"])
+                    self.csAfter.csmainwdw_lbl_CSID_show.setText((customer["Current Balance"]))
                 else:
                     self.csloginwdw_lbl_warning.setText("Invalid ID or Password!")
 
@@ -147,11 +147,11 @@ class CSMain(QMainWindow, Ui_customer_main_window):
     def update_balance_display(self):
         self.csmainwdw_lbl_balanceshow.setText(f"{str(self.balance)} €")
 
-    #     # file = f"QT_designer/customer_database/{CsLogin.CsId}.csv"
-    #     # with open (file) as f:
-    #     #     reader = csv.reader(file)
-    #     #     for row in reader:
-    #     #         balance = row[1]
+        # file = f"QT_designer/customer_database/{CsLogin.csafterlogin(self)}.csv"
+        # with open (file) as f:
+        #     reader = csv.reader(file)
+        #     for row in reader:
+        #         self.balance = row[1]
 
         # with open (f"{self.csmainwdw_lbl_CSinfo.text()}.csv", 'r') as infile:
         #     reader = csv. reader(infile)
