@@ -78,7 +78,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             customers["Name"] = Name
             customers["Email"] = Email
             customers["Password"] = Password
-            customers["Opening Balane"] = CurrentBalance
+            customers["Opening Balance"] = CurrentBalance
             customers["Current Balance"] = CurrentBalance 
             pyfile.append(customers)
         
