@@ -281,17 +281,62 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="csmainwdw_lbl_CSinfo">
+   <widget class="QLabel" name="csmainwdw_lbl_CSname_heading">
     <property name="geometry">
      <rect>
       <x>50</x>
       <y>60</y>
-      <width>371</width>
+      <width>131</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Müşteri bilgileri</string>
+     <string>Customer Name   :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="csmainwdw_lbl_CSname_show">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>60</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="csmainwdw_lbl_CSID_show">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>80</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="csmainwdw_lbl_CSID_heading">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>80</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Customer ID         :</string>
     </property>
    </widget>
   </widget>
