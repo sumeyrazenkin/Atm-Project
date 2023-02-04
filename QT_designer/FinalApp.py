@@ -2,11 +2,12 @@ from PyQt5.QtWidgets import *
 import sys
 from Ui_main_window import *
 from Ui_customer_login_window import *
-import json, csv, datetime
+import json, csv, datetime, random
 from Ui_customer_main_window import *
 from Ui_admin_createCS_window import *
 from Ui_admin_window import *
 from Ui_customer_statement_window import *
+
 
 class Main_Window(QMainWindow, Ui_open_window):
     def __init__(self):
@@ -64,7 +65,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear) # type: ignore
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_spinBox_balance.clear)
     def createcustomer(self):
-        CustomerID = self.admincswdw_linedit_CSid.text()
+        CustomerID = random.randint(100000,999999)
         Name = self.admincswdw_linedit_name.text()
         Email = self.admincswdw_linedit_email.text()
         Password = self.admincswdw_linedit_CSpassword_2.text()
@@ -74,14 +75,15 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             customers = {}
             with open (file, "r") as f:
                 pyfile = json.load(f)
-            customers["Customer_ID"] = CustomerID
+            customers["Customer_ID"] = str(CustomerID)
             customers["Name"] = Name
             customers["Email"] = Email
             customers["Password"] = Password
-            customers["Opening Balane"] = CurrentBalance
-            customers["Current Balance"] = CurrentBalance 
-            pyfile.append(customers)
-        
+            customers["Current Balance"] = CurrentBalance
+            for customer in pyfile:
+                if str(CustomerID) in customer["Customer_ID"]:
+                    break
+                pyfile.append(customers)
             with open (file, "w") as f:
                 json.dump(pyfile, f, indent=2)
             with open(f'QT_designer/customer_database/{CustomerID}.csv',"w", newline="\n") as x:
