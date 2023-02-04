@@ -78,6 +78,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             customers["Name"] = Name
             customers["Email"] = Email
             customers["Password"] = Password
+            customers["Opening Balane"] = CurrentBalance
             customers["Current Balance"] = CurrentBalance 
             pyfile.append(customers)
         
@@ -85,9 +86,8 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
                 json.dump(pyfile, f, indent=2)
             with open(f'QT_designer/customer_database/{CustomerID}.csv',"w", newline="\n") as x:
                 statement = csv.writer(x)
-                statement.writerow(["Customer ID", "Date", "Transaction Type", "Amount"])
-                statement.writerow([CustomerID,datetime.datetime.ctime(datetime.datetime.now()),"Account created", CurrentBalance])   # type: ignore
- # type: ignore
+                statement.writerow(["Date", "Transaction Type", "Amount", "Current Balance"])
+                statement.writerow([datetime.datetime.ctime(datetime.datetime.now()),"Account Created", CurrentBalance, CurrentBalance])
 
 class CsLogin(QMainWindow,Ui_customer_login_window):
     def __init__(self):
