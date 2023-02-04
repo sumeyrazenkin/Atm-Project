@@ -6,7 +6,6 @@ import json, csv, datetime
 from Ui_customer_main_window import *
 from Ui_admin_createCS_window import *
 from Ui_admin_window import *
-import datetime
 from Ui_customer_statement_window import *
 
 class Main_Window(QMainWindow, Ui_open_window):
