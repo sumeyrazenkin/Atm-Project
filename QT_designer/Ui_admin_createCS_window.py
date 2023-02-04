@@ -109,11 +109,6 @@ class Ui_admin_CScreate_window(object):
 
         self.retranslateUi(admin_CScreate_window)
         self.admincswdw_btn_exit.clicked.connect(admin_CScreate_window.close) # type: ignore
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_CSid.clear) # type: ignore
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_CSpassword_2.clear) # type: ignore
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_name.clear) # type: ignore
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear) # type: ignore
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_spinBox_balance.clear) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(admin_CScreate_window)
 
     def retranslateUi(self, admin_CScreate_window):
