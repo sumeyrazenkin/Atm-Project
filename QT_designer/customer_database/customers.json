@@ -1,0 +1,108 @@
+[
+  {
+    "Customer_ID": "123",
+    "Name": "Musab",
+    "Email": "musabsari@gmail.com",
+    "Password": "12345",
+    "Current Balance": 0.0
+  },
+  {
+    "Customer_ID": "12",
+    "Name": "Melike",
+    "Email": "melike@gmail.com",
+    "Password": "1234",
+    "Current Balance": 0.0
+  },
+  {
+    "Customer_ID": "12",
+    "Name": "musab",
+    "Email": "musabsari@gmail.com",
+    "Password": "3123",
+    "Current Balance": "200  \u20ac"
+  },
+  {
+    "Customer_ID": "171",
+    "Name": "m",
+    "Email": "k",
+    "Password": "171",
+    "Current Balance": "250  \u20ac"
+  },
+  {
+    "Customer_ID": "0",
+    "Name": "mel",
+    "Email": "mel",
+    "Password": "0",
+    "Current Balance": "500  \u20ac"
+  },
+  {
+    "Customer_ID": "9",
+    "Name": "kl",
+    "Email": "kl",
+    "Password": "9",
+    "Current Balance": "200  \u20ac"
+  },
+  {
+    "Customer_ID": "8",
+    "Name": "li",
+    "Email": "li",
+    "Password": "8",
+    "Current Balance": "520  \u20ac"
+  },
+  {
+    "Customer_ID": "7",
+    "Name": "uy",
+    "Email": "uy",
+    "Password": "7",
+    "Current Balance": "600  \u20ac"
+  },
+  {
+    "Customer_ID": "111",
+    "Name": "yu",
+    "Email": "yu",
+    "Password": "111",
+    "Current Balance": "400  \u20ac"
+  },
+  {
+    "Customer_ID": "111",
+    "Name": "yu",
+    "Email": "yu",
+    "Password": "111",
+    "Current Balance": "400  \u20ac"
+  },
+  {
+    "Customer_ID": "34",
+    "Name": "op",
+    "Email": "op",
+    "Password": "34",
+    "Current Balance": "400  \u20ac"
+  },
+  {
+    "Customer_ID": "56",
+    "Name": "ty",
+    "Email": "ty",
+    "Password": "56",
+    "Current Balance": "400  \u20ac"
+  },
+  {
+    "Customer_ID": "90",
+    "Name": "op",
+    "Email": "op",
+    "Password": "90",
+    "Current Balance": "700  \u20ac"
+  },
+  {
+    "Customer_ID": "89",
+    "Name": "u\u0131",
+    "Email": "u\u0131",
+    "Password": "89",
+    "Current Balance": "900  \u20ac"
+  },
+  {
+    "Customer_ID": "00",
+    "Name": "ii",
+    "Email": "ii",
+    "Password": "00",
+    "Opening Balane": "570  \u20ac",
+    "Current Balance": "570  \u20ac"
+  }
+]
