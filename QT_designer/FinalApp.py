@@ -140,15 +140,15 @@ class CSMain(QMainWindow, Ui_customer_main_window):
     def __init__(self):
         super(CSMain, self).__init__()
         self.setupUi(self)
-        self.balance = self.csmainwdw_lbl_balanceshow.text()
-        self.ID
-        self.take_balance()
-        self.balance
+
         self.amount = self.csmainwdw_spinbox_money.value()
+        self.ID
+        
+        self.take_balance() #yeniden düzenlenecek
+        self.balance  #yeniden düzenlenecek
 
         self.csmainwdw_btn_getcash.clicked.connect(self.get_cash)
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
-
         self.csmainwdw_btn_statement.clicked.connect(self.show_statement)
         
     def take_balance(self):
