@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import *
-import sys
+import json, csv, datetime, random, sys
+
 from Ui_main_window import *
 from Ui_customer_login_window import *
-import json, csv, datetime, random
 from Ui_customer_main_window import *
 from Ui_admin_createCS_window import *
 from Ui_admin_window import *
