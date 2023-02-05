@@ -79,6 +79,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             customers["Name"] = Name
             customers["Email"] = Email
             customers["Password"] = Password
+            customers["Opening Balance"] = CurrentBalance
             customers["Current Balance"] = CurrentBalance
             try:
                 for customer in pyfile:
@@ -93,7 +94,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             with open(f'QT_designer/customer_database/{CustomerID}.csv',"w", newline="\n") as x:
                 statement = csv.writer(x)
                 statement.writerow(["Date", "Transaction Type", "Amount", "Current Balance"])
-                statement.writerow([datetime.datetime.ctime(datetime.datetime.now()),"Account Created", CurrentBalance, CurrentBalance])
+                statement.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Account Created", CurrentBalance, CurrentBalance])   # type: ignore
 
 class CsLogin(QMainWindow,Ui_customer_login_window):
     def __init__(self):
