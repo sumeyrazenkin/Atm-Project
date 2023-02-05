@@ -27,5 +27,29 @@
     "Email": "asd",
     "Password": "4",
     "Current Balance": "200\u20ac"
+  },
+  {
+    "Customer_ID": "269563",
+    "Name": "mel",
+    "Email": "mel",
+    "Password": "1",
+    "Opening Balance": "400\u20ac",
+    "Current Balance": "400\u20ac"
+  },
+  {
+    "Customer_ID": "625512",
+    "Name": "me",
+    "Email": "me",
+    "Password": "1",
+    "Opening Balance": "400\u20ac",
+    "Current Balance": "400\u20ac"
+  },
+  {
+    "Customer_ID": "876635",
+    "Name": "ka",
+    "Email": "ka",
+    "Password": "1",
+    "Opening Balance": "800\u20ac",
+    "Current Balance": "800\u20ac"
   }
 ]
