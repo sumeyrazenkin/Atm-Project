@@ -1,13 +1,12 @@
 from PyQt5.QtWidgets import *
-import json, csv, datetime, random, sys
-
+import sys
 from Ui_main_window import *
 from Ui_customer_login_window import *
+import json, csv, datetime
 from Ui_customer_main_window import *
 from Ui_admin_createCS_window import *
 from Ui_admin_window import *
 from Ui_customer_statement_window import *
-
 
 class Main_Window(QMainWindow, Ui_open_window):
     def __init__(self):
@@ -65,7 +64,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear) # type: ignore
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_spinBox_balance.clear)
     def createcustomer(self):
-        CustomerID = random.randint(100000,999999)
+        CustomerID = self.admincswdw_linedit_CSid.text()
         Name = self.admincswdw_linedit_name.text()
         Email = self.admincswdw_linedit_email.text()
         Password = self.admincswdw_linedit_CSpassword_2.text()
@@ -75,20 +74,14 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             customers = {}
             with open (file, "r") as f:
                 pyfile = json.load(f)
-            customers["Customer_ID"] = str(CustomerID)
+            customers["Customer_ID"] = CustomerID
             customers["Name"] = Name
             customers["Email"] = Email
             customers["Password"] = Password
             customers["Opening Balance"] = CurrentBalance
-            customers["Current Balance"] = CurrentBalance
-            try:
-                for customer in pyfile:
-                    if str(CustomerID) in customer["Customer_ID"]:
-                        raise Exception("There is already a customer with the same ID")
-            except Exception():
-                pass
-            else:
-                pyfile.append(customers)
+            customers["Current Balance"] = CurrentBalance 
+            pyfile.append(customers)
+        
             with open (file, "w") as f:
                 json.dump(pyfile, f, indent=2)
             with open(f'QT_designer/customer_database/{CustomerID}.csv',"w", newline="\n") as x:
@@ -100,36 +93,28 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
     def __init__(self):
         super(CsLogin, self).__init__()
         self.setupUi(self)
-        self.csloginwdw_btn_login.clicked.connect(self.csafterlogin)  
-
+        self.csloginwdw_btn_login.clicked.connect(self.csafterlogin)
         self.csloginwdw_btn_exit.clicked.connect(self.close_l)
-        # self.csloginwdw_btn_returnmain.clicked.connect(self.Main_Window)
-        #self.csloginwdw_btn_returnmain.clicked.connect(Ui_customer_login_window.close)
 
     def csafterlogin(self):
-        self.CsId = self.csloginwdw_linedit_ADid.text()  
-        self.CsPs = self.csloginwdw_linedit_ADpassword.text() 
-        if len(self.CsId) == 0 or len(self.CsPs) == 0:
+        CsId = self.csloginwdw_linedit_ADid.text()  
+        CsPs = self.csloginwdw_linedit_ADpassword.text() 
+        if len(CsId) == 0 or CsPs == 0:
             self.csloginwdw_lbl_warning.setText("Please fill the required fields!")
         else:
             file = r"QT_designer/customer_database/customers.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
             for customer in pyfile:    
-                if self.CsId in customer["Customer_ID"] and self.CsPs in customer["Password"]:
-                    CSMain.ID = self.CsId
+                if CsId in customer["Customer_ID"] and CsPs in customer["Password"]:
                     print("Successfully logged in")
-                    with open('QT_designer/customer_database/loggedincustomer.csv',"w+", newline="\n") as x:
-                        statement = csv.writer(x)
-                        statement.writerow(["The Customer"])
-                        statement.writerow([self.CsId])
-                    x.close()
                     self.csAfter = CSMain()
                     widget.addWidget(self.csAfter)
                     widget.setCurrentIndex(widget.currentIndex()+1)
                     self.csAfter.show()
                     self.csAfter.csmainwdw_lbl_CSname_show.setText(customer["Name"])
                     self.csAfter.csmainwdw_lbl_CSID_show.setText(customer["Customer_ID"])
+                    
                 else:
                     self.csloginwdw_lbl_warning.setText("Invalid ID or Password!")
 
@@ -140,85 +125,96 @@ class CSMain(QMainWindow, Ui_customer_main_window):
     def __init__(self):
         super(CSMain, self).__init__()
         self.setupUi(self)
-
-        self.amount = self.csmainwdw_spinbox_money.value()
-        self.ID
+        self.ID = CsLogin.csafterlogin
+        # self.file = f"QT_designer/customer_database/{self.ID}.csv"
         
-        self.take_balance() #yeniden düzenlenecek
-        self.balance  #yeniden düzenlenecek
+        # self.balance = self.csmainwdw_lbl_balanceshow.text()
+        
+        # self.balance = int(self.csmainwdw_lbl_balanceshow.value())
+        self.update_balance_display()
+        self.amount = self.csmainwdw_spinbox_money.value()
 
         self.csmainwdw_btn_getcash.clicked.connect(self.get_cash)
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
-        self.csmainwdw_btn_statement.clicked.connect(self.show_statement)
+
+        self.csmainwdw_btn_statement.clicked.connect(self.add_statement)
+        # self.csmainwdw_lbl_CSinfo.setText(self.show_CSinfo)
+        # self.show_CSinfo
+    
+    def update_balance_display(self):
+        self.csmainwdw_lbl_balanceshow.setText(f"{str(self.ID)} €")
+        # file = self.file
         
-    def take_balance(self):
-        file = f"QT_designer/customer_database/{self.ID}.csv"
-        with open (file, "r") as f:
-            reader = csv.reader(f)
-            all_rows = list(reader)
-            last_row = all_rows[-1]
-            current_element = last_row[-1]
-            current_balance = current_element.split("€")[0]
-            self.balance = current_balance
-            self.csmainwdw_lbl_balanceshow.setText(f"{str(self.balance)} €")
+        # with open (file, "r") as f:
+        #     reader = csv.reader(file)
+        #     all_rows = list(reader)
+        #     last_row = all_rows[-2]
+        #     current_element = last_row[-2]
+        #     current_balance = current_element.split("")[0]
+        #     print(type(current_balance))
+        #     current_balance = int(current_element.split("")[0])
+        #     print(current_balance)
+        #     self.balance = current_balance
+        #     self.csmainwdw_lbl_balanceshow.setText(f"{str(self.balance)} €")
+        print(self.ID)
+           
         
+        # with open("file.csv", "r") as file:
+        #     reader = csv.reader(file)
+        #     all_rows = list(reader)
+        #     last_row = all_rows[-2]
+        #     last_element = last_row[-1]
+        #     print(last_element)
+
+        # with open (f"{self.csmainwdw_lbl_CSinfo.text()}.csv", 'r') as infile:
+        #     reader = csv. reader(infile)
+        #     header = next (reader)
+        #     for row in reader:
+        #         self.balance = row[3]
+        #         print(self.balance)
+
+    #     pass
+        
+
     def deposit(self):
         if self.csmainwdw_spinbox_money.value() > 0:
-            b = int(self.balance)
-            b += self.csmainwdw_spinbox_money.value()
+            self.balance += self.csmainwdw_spinbox_money.value()
             self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
             self.csmainwdw_lbl_resultmessage.setText("Successful deposit to the account")
-
-            file = f"QT_designer/customer_database/{self.ID}.csv"
-            with open (file, "a") as f:
-                writer = csv.writer(f)
-                writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Money Deposit", self.csmainwdw_spinbox_money.value(), b])
-                self.take_balance()
-                self.csmainwdw_lbl_balanceshow.setText(f"{str(b)} €")
-
+            self.update_balance_display()
         else:
             self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
             self.csmainwdw_lbl_resultmessage.setText("Please enter an amount..")
 
     def get_cash(self):
         if self.csmainwdw_spinbox_money.value() > 0:
-            c = int(self.balance)
-            if c >= self.csmainwdw_spinbox_money.value():
-                c -= self.csmainwdw_spinbox_money.value()
+            if self.balance >= self.csmainwdw_spinbox_money.value():
+                self.balance -= self.csmainwdw_spinbox_money.value()
                 self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
                 self.csmainwdw_lbl_resultmessage.setText("Successful withdraw from the account")
-                
-                file = f"QT_designer/customer_database/{self.ID}.csv"
-                with open (file, "a") as f:
-                    writer = csv.writer(f)
-                    writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Money Withdraw", self.csmainwdw_spinbox_money.value(), c])
-                    self.take_balance()
-                    self.csmainwdw_lbl_balanceshow.setText(f"{str(c)} €")
+                self.update_balance_display()
             else:
                 self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
                 self.csmainwdw_lbl_resultmessage.setText("Non-sufficient funds in the account..")
 
+        elif self.csmainwdw_spinbox_money.value() == 0:
+                self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
+                self.csmainwdw_lbl_resultmessage.setText("Please enter an amount to withdraw..")
         else:
             self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
-            self.csmainwdw_lbl_resultmessage.setText("Please enter an amount to withdraw..")
+            self.csmainwdw_lbl_resultmessage.setText("Please enter a positif amount..")
     
-    def show_statement(self):
+    def add_statement(self):
         self.csstatement = CSinfo()
         widget.addWidget(self.csstatement)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        file = f"QT_designer/customer_database/{self.ID}.csv"
-        with open (file, "r") as f:
-            reader = csv.reader(f)
-            for line in reader:
-                a = ", ".join(line)
-                self.csstatement.csstatementwdw_txt_statement.setText(a)
         self.csstatement.show()
-        self.csstatement.csstatementwdw_lbl_balanceshow.setText(f"{self.balance} €")
-        
+
 class CSinfo(QMainWindow, Ui_customer_statement_window):
     def __init__(self):
         super(CSinfo, self).__init__()
         self.setupUi(self)
+        
         
         
 if __name__ == "__main__":

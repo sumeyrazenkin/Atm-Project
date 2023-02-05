@@ -68,7 +68,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
                 statement = csv.writer(x)
                 statement.writerow(["Customer_ID",'Transactions'])
                 statement.writerow([CustomerID,CurrentBalance])
-
+  
                 
 
 
