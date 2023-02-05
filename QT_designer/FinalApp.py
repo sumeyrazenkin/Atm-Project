@@ -80,9 +80,13 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             customers["Email"] = Email
             customers["Password"] = Password
             customers["Current Balance"] = CurrentBalance
-            for customer in pyfile:
-                if str(CustomerID) in customer["Customer_ID"]:
-                    break
+            try:
+                for customer in pyfile:
+                    if str(CustomerID) in customer["Customer_ID"]:
+                        raise Exception("There is already a customer with the same ID")
+            except Exception():
+                pass
+            else:
                 pyfile.append(customers)
             with open (file, "w") as f:
                 json.dump(pyfile, f, indent=2)
@@ -113,6 +117,11 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
             for customer in pyfile:    
                 if self.CsId in customer["Customer_ID"] and self.CsPs in customer["Password"]:
                     print("Successfully logged in")
+                    with open('QT_designer/customer_database/loggedincustomer.csv',"w+", newline="\n") as x:
+                        statement = csv.writer(x)
+                        statement.writerow(["The Customer"])
+                        statement.writerow([self.CsId])
+                    x.close()
                     self.csAfter = CSMain()
                     widget.addWidget(self.csAfter)
                     widget.setCurrentIndex(widget.currentIndex()+1)

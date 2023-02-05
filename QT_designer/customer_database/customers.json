@@ -13,5 +13,19 @@
     "Password": "45",
     "Opening Balane": "450\u20ac",
     "Current Balance": "450\u20ac"
+  },
+  {
+    "Customer_ID": "490865",
+    "Name": "asd",
+    "Email": "asd",
+    "Password": "2",
+    "Current Balance": "200\u20ac"
+  },
+  {
+    "Customer_ID": "378229",
+    "Name": "asd",
+    "Email": "asd",
+    "Password": "4",
+    "Current Balance": "200\u20ac"
   }
 ]
