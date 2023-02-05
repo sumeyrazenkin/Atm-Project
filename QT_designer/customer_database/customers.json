@@ -51,5 +51,13 @@
     "Password": "1",
     "Opening Balance": "800\u20ac",
     "Current Balance": "800\u20ac"
+  },
+  {
+    "Customer_ID": "793072",
+    "Name": "melike",
+    "Email": "melike",
+    "Password": "1",
+    "Opening Balance": "500\u20ac",
+    "Current Balance": "500\u20ac"
   }
 ]

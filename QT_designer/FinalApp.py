@@ -182,18 +182,18 @@ class CSMain(QMainWindow, Ui_customer_main_window):
 
     def get_cash(self):
         if self.csmainwdw_spinbox_money.value() > 0:
-            b = int(self.balance)
-            if b >= self.csmainwdw_spinbox_money.value():
-                b -= self.csmainwdw_spinbox_money.value()
+            c = int(self.balance)
+            if c >= self.csmainwdw_spinbox_money.value():
+                c -= self.csmainwdw_spinbox_money.value()
                 self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
                 self.csmainwdw_lbl_resultmessage.setText("Successful withdraw from the account")
                 
                 file = f"QT_designer/customer_database/{self.ID}.csv"
                 with open (file, "a") as f:
                     writer = csv.writer(f)
-                    writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Money Withdraw", self.csmainwdw_spinbox_money.value(), b])
+                    writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Money Withdraw", self.csmainwdw_spinbox_money.value(), c])
                     self.take_balance()
-                    self.csmainwdw_lbl_balanceshow.setText(f"{str(b)} €")
+                    self.csmainwdw_lbl_balanceshow.setText(f"{str(c)} €")
             else:
                 self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
                 self.csmainwdw_lbl_resultmessage.setText("Non-sufficient funds in the account..")
@@ -206,8 +206,15 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         self.csstatement = CSinfo()
         widget.addWidget(self.csstatement)
         widget.setCurrentIndex(widget.currentIndex()+1)
+        file = f"QT_designer/customer_database/{self.ID}.csv"
+        with open (file, "r") as f:
+            reader = csv.reader(f)
+            for line in reader:
+                a = ", ".join(line)
+                self.csstatement.csstatementwdw_txt_statement.setText(a)
         self.csstatement.show()
-
+        self.csstatement.csstatementwdw_lbl_balanceshow.setText(f"{self.balance} €")
+        
 class CSinfo(QMainWindow, Ui_customer_statement_window):
     def __init__(self):
         super(CSinfo, self).__init__()
