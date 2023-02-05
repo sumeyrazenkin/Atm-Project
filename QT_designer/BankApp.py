@@ -94,20 +94,25 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
     def csafterlogin(self):
         CsId = self.csloginwdw_linedit_ADid.text()  
         CsPs = self.csloginwdw_linedit_ADpassword.text() 
+        try:
+            CsId = int(CsId)
+        except ValueError:
+            self.csloginwdw_lbl_warning.setText("Customer Id must be a number!")
+
         if len(CsId) == 0 or CsPs == 0:
             self.csloginwdw_lbl_warning.setText("Please fill the required fields!")
         else:
             file = r"QT_designer/customer_database/customers.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
-            if CsId == pyfile[0]["Customer_ID"] and CsPs == pyfile[0]["Password"]:
+            if CsId == pyfile[0]["Customer_ID"] and CsPs == pyfile[0]["Password"]:   
                 print("Successfully logged in")
                 self.csAfter = CSMain()
                 widget.addWidget(self.csAfter)
                 widget.setCurrentIndex(widget.currentIndex()+1)
                 self.csAfter.show()
-            else:
-                self.csloginwdw_lbl_warning.setText("Invalid ID or Password!")
+            #else:
+                #pass#self.csloginwdw_lbl_warning.setText("Invalid ID or Password!")
 
     def close_l(self):
         sys.exit            
