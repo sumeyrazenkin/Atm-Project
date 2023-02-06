@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>40</y>
+      <y>30</y>
       <width>321</width>
       <height>61</height>
      </rect>
@@ -35,30 +35,12 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="admincswdw_lbl_ADid">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>110</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Customer ID:</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="admincswdw_btn_create">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>380</y>
-      <width>181</width>
+      <x>130</x>
+      <y>280</y>
+      <width>211</width>
       <height>51</height>
      </rect>
     </property>
@@ -71,21 +53,11 @@
      <string>CREATE CUSTOMER</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="admincswdw_linedit_CSid">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>150</y>
-      <width>161</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="admincswdw_linedit_name">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>230</y>
+      <y>150</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -134,7 +106,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>190</y>
+      <y>110</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -151,8 +123,8 @@
    <widget class="QLabel" name="admincswdw_lbl_password">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>110</y>
+      <x>270</x>
+      <y>190</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -169,7 +141,7 @@
    <widget class="QLineEdit" name="admincswdw_linedit_email">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>50</x>
       <y>230</y>
       <width>161</width>
       <height>31</height>
@@ -179,7 +151,7 @@
    <widget class="QLabel" name="admincswdw_lbl_email">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>50</x>
       <y>190</y>
       <width>131</width>
       <height>31</height>
@@ -197,8 +169,8 @@
    <widget class="QLineEdit" name="admincswdw_linedit_CSpassword_2">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>150</y>
+      <x>270</x>
+      <y>230</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -210,8 +182,8 @@
    <widget class="QLabel" name="admincswdw_lbl_balance">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>280</y>
+      <x>270</x>
+      <y>110</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -228,8 +200,8 @@
    <widget class="QSpinBox" name="admincswdw_spinBox_balance">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>320</y>
+      <x>270</x>
+      <y>150</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -250,14 +222,15 @@
    <widget class="QLabel" name="admincswdw_lbl_result">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>440</y>
-      <width>241</width>
-      <height>16</height>
+      <x>80</x>
+      <y>360</y>
+      <width>311</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(251, 246, 195);</string>
+     <string notr="true">
+font: 24pt &quot;.AppleSystemUIFont&quot;;</string>
     </property>
     <property name="text">
      <string/>

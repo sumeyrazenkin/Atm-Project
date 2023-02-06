@@ -58,8 +58,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         super(ADAfterLogin, self).__init__()
         self.setupUi(self)
         self.admincswdw_btn_create.clicked.connect(self.createcustomer)
-
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_CSid.clear) # type: ignore
+ # type: ignore
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_CSpassword_2.clear) # type: ignore
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_name.clear) # type: ignore
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear) # type: ignore
@@ -89,6 +88,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             except Exception():
                 pass
             else:
+                self.admincswdw_lbl_result.setText(f"NEW CUSTOMER CREATED:\n{CustomerID}")
                 pyfile.append(customers)
             with open (file, "w") as f:
                 json.dump(pyfile, f, indent=2)
@@ -125,12 +125,15 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
                         statement.writerow(["The Customer"])
                         statement.writerow([self.CsId])
                     x.close()
-                    self.csAfter = CSMain()
-                    widget.addWidget(self.csAfter)
-                    widget.setCurrentIndex(widget.currentIndex()+1)
-                    self.csAfter.show()
-                    self.csAfter.csmainwdw_lbl_CSname_show.setText(customer["Name"])
-                    self.csAfter.csmainwdw_lbl_CSID_show.setText(customer["Customer_ID"])
+                    try:
+                        self.csAfter = CSMain()
+                        widget.addWidget(self.csAfter)
+                        widget.setCurrentIndex(widget.currentIndex()+1)
+                        self.csAfter.show()
+                        self.csAfter.csmainwdw_lbl_CSname_show.setText(customer["Name"])
+                        self.csAfter.csmainwdw_lbl_CSID_show.setText(customer["Customer_ID"])
+                    except:
+                        print("error")
                 else:
                     self.csloginwdw_lbl_warning.setText("Invalid ID or Password!")
 
@@ -230,12 +233,17 @@ class CSinfo(QMainWindow, Ui_customer_statement_window):
         self.setupUi(self)
         
 if __name__ == "__main__":
-
     app = QApplication(sys.argv)
     mainwindow = Main_Window()
     widget = QtWidgets.QStackedWidget()
+    
     widget.addWidget(mainwindow)
     widget.setFixedHeight(600)
     widget.setFixedWidth(500)
     widget.show()
-    sys.exit(app.exec_())
+
+    try:
+        sys.exit(app.exec_())
+
+    except:
+        print("Exiting")

@@ -99,5 +99,21 @@
     "Password": "1",
     "Opening Balance": "500\u20ac",
     "Current Balance": "500\u20ac"
+  },
+  {
+    "Customer_ID": "620308",
+    "Name": "Zeynep Kaya",
+    "Email": "zeynep@gmail.com",
+    "Password": "1",
+    "Opening Balance": "200\u20ac",
+    "Current Balance": "200\u20ac"
+  },
+  {
+    "Customer_ID": "840345",
+    "Name": "Mehmet Kaya",
+    "Email": "mehmet@gmail.com",
+    "Password": "1",
+    "Opening Balance": "1800\u20ac",
+    "Current Balance": "1800\u20ac"
   }
 ]

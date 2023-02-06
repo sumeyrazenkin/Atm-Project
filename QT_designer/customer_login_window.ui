@@ -161,7 +161,7 @@
      <string notr="true">color: rgb(255, 38, 0);</string>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
   </widget>

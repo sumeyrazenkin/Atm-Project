@@ -64,6 +64,7 @@ class Ui_customer_login_window(object):
         self.csloginwdw_lbl_warning = QtWidgets.QLabel(self.centralwidget)
         self.csloginwdw_lbl_warning.setGeometry(QtCore.QRect(140, 300, 211, 16))
         self.csloginwdw_lbl_warning.setStyleSheet("color: rgb(255, 38, 0);")
+        self.csloginwdw_lbl_warning.setText("")
         self.csloginwdw_lbl_warning.setObjectName("csloginwdw_lbl_warning")
         customer_login_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(customer_login_window)
@@ -87,4 +88,3 @@ class Ui_customer_login_window(object):
         self.csloginwdw_btn_login.setText(_translate("customer_login_window", "LOGIN"))
         self.csloginwdw_btn_returnmain.setText(_translate("customer_login_window", "Main Window"))
         self.csloginwdw_btn_exit.setText(_translate("customer_login_window", "Exit"))
-        self.csloginwdw_lbl_warning.setText(_translate("customer_login_window", "TextLabel"))
