@@ -58,10 +58,9 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         super(ADAfterLogin, self).__init__()
         self.setupUi(self)
         self.admincswdw_btn_create.clicked.connect(self.createcustomer)
- # type: ignore
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_CSpassword_2.clear) # type: ignore
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_name.clear) # type: ignore
-        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear) # type: ignore
+        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_CSpassword_2.clear)
+        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_name.clear)
+        self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear)
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_spinBox_balance.clear)
         
     def createcustomer(self):
