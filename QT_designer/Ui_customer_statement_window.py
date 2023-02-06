@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\qwert\OneDrive\Belgeler\GitHub\Atm-Project\QT_designer\customer_statement_window.ui'
+# Form implementation generated from reading ui file '/Users/melike/Documents/GitHub/Atm-Project/QT_designer/customer_statement_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -22,7 +22,7 @@ class Ui_customer_statement_window(object):
         self.centralwidget = QtWidgets.QWidget(customer_statement_window)
         self.centralwidget.setObjectName("centralwidget")
         self.csstatementwdw_lbl_heading = QtWidgets.QLabel(self.centralwidget)
-        self.csstatementwdw_lbl_heading.setGeometry(QtCore.QRect(40, 10, 391, 61))
+        self.csstatementwdw_lbl_heading.setGeometry(QtCore.QRect(40, 20, 391, 41))
         font = QtGui.QFont()
         font.setPointSize(24)
         self.csstatementwdw_lbl_heading.setFont(font)
@@ -41,28 +41,38 @@ class Ui_customer_statement_window(object):
         self.csstatementwdw_btn_exit.setFont(font)
         self.csstatementwdw_btn_exit.setObjectName("csstatementwdw_btn_exit")
         self.csstatementwdw_lbl_balanceheading = QtWidgets.QLabel(self.centralwidget)
-        self.csstatementwdw_lbl_balanceheading.setGeometry(QtCore.QRect(40, 90, 191, 31))
+        self.csstatementwdw_lbl_balanceheading.setGeometry(QtCore.QRect(40, 60, 191, 31))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.csstatementwdw_lbl_balanceheading.setFont(font)
         self.csstatementwdw_lbl_balanceheading.setObjectName("csstatementwdw_lbl_balanceheading")
         self.csstatementwdw_lbl_balanceshow = QtWidgets.QLabel(self.centralwidget)
-        self.csstatementwdw_lbl_balanceshow.setGeometry(QtCore.QRect(250, 90, 171, 31))
+        self.csstatementwdw_lbl_balanceshow.setGeometry(QtCore.QRect(250, 60, 191, 31))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.csstatementwdw_lbl_balanceshow.setFont(font)
         self.csstatementwdw_lbl_balanceshow.setTextFormat(QtCore.Qt.AutoText)
         self.csstatementwdw_lbl_balanceshow.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.csstatementwdw_lbl_balanceshow.setObjectName("csstatementwdw_lbl_balanceshow")
-        self.csstatementwdw_txt_statement = QtWidgets.QTextBrowser(self.centralwidget)
-        self.csstatementwdw_txt_statement.setGeometry(QtCore.QRect(40, 140, 411, 341))
-        self.csstatementwdw_txt_statement.setObjectName("csstatementwdw_txt_statement")
         self.csstatementwdw_btn_returnmain_2 = QtWidgets.QPushButton(self.centralwidget)
         self.csstatementwdw_btn_returnmain_2.setGeometry(QtCore.QRect(180, 500, 131, 41))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.csstatementwdw_btn_returnmain_2.setFont(font)
         self.csstatementwdw_btn_returnmain_2.setObjectName("csstatementwdw_btn_returnmain_2")
+        self.csstatementwdw_tbl_statement = QtWidgets.QTableWidget(self.centralwidget)
+        self.csstatementwdw_tbl_statement.setGeometry(QtCore.QRect(40, 100, 411, 381))
+        self.csstatementwdw_tbl_statement.setObjectName("csstatementwdw_tbl_statement")
+        self.csstatementwdw_tbl_statement.setColumnCount(4)
+        self.csstatementwdw_tbl_statement.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.csstatementwdw_tbl_statement.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.csstatementwdw_tbl_statement.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.csstatementwdw_tbl_statement.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.csstatementwdw_tbl_statement.setHorizontalHeaderItem(3, item)
         customer_statement_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(customer_statement_window)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
@@ -84,9 +94,12 @@ class Ui_customer_statement_window(object):
         self.csstatementwdw_btn_exit.setText(_translate("customer_statement_window", "Exit"))
         self.csstatementwdw_lbl_balanceheading.setText(_translate("customer_statement_window", "Your current balance:"))
         self.csstatementwdw_lbl_balanceshow.setText(_translate("customer_statement_window", "0 €"))
-        self.csstatementwdw_txt_statement.setHtml(_translate("customer_statement_window", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.csstatementwdw_btn_returnmain_2.setText(_translate("customer_statement_window", "Customer Page"))
+        item = self.csstatementwdw_tbl_statement.horizontalHeaderItem(0)
+        item.setText(_translate("customer_statement_window", "Transaction Date"))
+        item = self.csstatementwdw_tbl_statement.horizontalHeaderItem(1)
+        item.setText(_translate("customer_statement_window", "Transaction Type"))
+        item = self.csstatementwdw_tbl_statement.horizontalHeaderItem(2)
+        item.setText(_translate("customer_statement_window", "Amount"))
+        item = self.csstatementwdw_tbl_statement.horizontalHeaderItem(3)
+        item.setText(_translate("customer_statement_window", "Balance"))

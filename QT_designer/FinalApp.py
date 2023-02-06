@@ -213,9 +213,12 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         file = f"QT_designer/customer_database/{self.ID}.csv"
         with open (file, "r") as f:
             reader = csv.reader(f)
-            for line in reader:
-                a = ", ".join(line)
-                self.csstatement.csstatementwdw_txt_statement.setText(a)
+            data = [row for row in reader]
+            self.csstatement.csstatementwdw_tbl_statement.setRowCount(len(data))
+            self.csstatement.csstatementwdw_tbl_statement.setColumnCount(len(data[0]))
+            for i, row in enumerate(data):
+                for j, value in enumerate(row):
+                    self.csstatement.csstatementwdw_tbl_statement.setItem(i, j, QTableWidgetItem(value))
         self.csstatement.show()
         self.take_balance()
         self.csstatement.csstatementwdw_lbl_balanceshow.setText(f"{self.balance} €")
@@ -224,7 +227,6 @@ class CSinfo(QMainWindow, Ui_customer_statement_window):
     def __init__(self):
         super(CSinfo, self).__init__()
         self.setupUi(self)
-        
         
 if __name__ == "__main__":
 
