@@ -119,11 +119,16 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
                 if self.CsId in customer["Customer_ID"] and self.CsPs in customer["Password"]:
                     CSMain.ID = self.CsId
                     print("Successfully logged in")
-                    with open('QT_designer/customer_database/loggedincustomer.csv',"w+", newline="\n") as x:
-                        statement = csv.writer(x)
-                        statement.writerow(["The Customer"])
-                        statement.writerow([self.CsId])
-                    x.close()
+                    file = f"QT_designer/customer_database/{self.CsId}.csv"
+                    with open (file, "r") as f:
+                        reader = csv.reader(f)
+                        all_rows = list(reader)
+                        last_row = all_rows[-1]
+                        current_element = last_row[-1]
+                        self.balance = current_element.split("€")[0]
+                    with open (file, "a", newline="\n") as f:
+                        writer = csv.writer(f)
+                        writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Logged in", "N/A", str(self.balance)+"€"])
                     try:
                         self.csAfter = CSMain()
                         widget.addWidget(self.csAfter)
