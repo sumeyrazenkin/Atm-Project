@@ -115,5 +115,13 @@
     "Password": "1",
     "Opening Balance": "1800\u20ac",
     "Current Balance": "1800\u20ac"
+  },
+  {
+    "Customer_ID": "102451",
+    "Name": "Ahmet Kaya",
+    "Email": "ahmet@xmail.com",
+    "Password": "1",
+    "Opening Balance": "300\u20ac",
+    "Current Balance": "300\u20ac"
   }
 ]
