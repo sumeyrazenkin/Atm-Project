@@ -123,5 +123,13 @@
     "Password": "1",
     "Opening Balance": "300\u20ac",
     "Current Balance": "300\u20ac"
+  },
+  {
+    "Customer_ID": "527153",
+    "Name": "a",
+    "Email": "s",
+    "Password": "1",
+    "Opening Balance": "200\u20ac",
+    "Current Balance": "200\u20ac"
   }
 ]
