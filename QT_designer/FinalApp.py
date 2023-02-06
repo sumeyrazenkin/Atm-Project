@@ -179,7 +179,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
             self.csmainwdw_lbl_resultmessage.setText("Successful deposit to the account")
 
             file = f"QT_designer/customer_database/{self.ID}.csv"
-            with open (file, "a") as f:
+            with open (file, "a", newline="\n") as f:
                 writer = csv.writer(f)
                 writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Deposit", str(self.csmainwdw_spinbox_money.value())+"€", str(b)+"€"])
                 self.csmainwdw_lbl_balanceshow.setText(f"{str(b)} €")
@@ -198,7 +198,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
                 self.csmainwdw_lbl_resultmessage.setText("Successful withdraw from the account")
                 
                 file = f"QT_designer/customer_database/{self.ID}.csv"
-                with open (file, "a") as f:
+                with open (file, "a", newline="\n") as f:
                     writer = csv.writer(f)
                     writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Withdraw", str(self.csmainwdw_spinbox_money.value())+"€", str(c)+"€"])
                     self.csmainwdw_lbl_balanceshow.setText(f"{str(c)} €")
