@@ -59,5 +59,13 @@
     "Password": "1",
     "Opening Balance": "500\u20ac",
     "Current Balance": "500\u20ac"
+  },
+  {
+    "Customer_ID": "738223",
+    "Name": "ahmet",
+    "Email": "a@gmail.com",
+    "Password": "1",
+    "Opening Balance": "1750\u20ac",
+    "Current Balance": "1750\u20ac"
   }
 ]

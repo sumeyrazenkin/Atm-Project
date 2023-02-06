@@ -214,8 +214,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         with open (file, "r") as f:
             reader = csv.reader(f)
             for line in reader:
-                a = ", ".join(line)
-                self.csstatement.csstatementwdw_txt_statement.setText(a)
+                self.csstatement.csstatementwdw_txt_statement.setText(line)
         self.csstatement.show()
         self.take_balance()
         self.csstatement.csstatementwdw_lbl_balanceshow.setText(f"{self.balance} €")
