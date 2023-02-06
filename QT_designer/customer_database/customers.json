@@ -67,5 +67,37 @@
     "Password": "1",
     "Opening Balance": "1750\u20ac",
     "Current Balance": "1750\u20ac"
+  },
+  {
+    "Customer_ID": "683372",
+    "Name": "Melike KAYA",
+    "Email": "melikekaya@gmail.com",
+    "Password": "1",
+    "Opening Balance": "400\u20ac",
+    "Current Balance": "400\u20ac"
+  },
+  {
+    "Customer_ID": "561680",
+    "Name": "Melike KAYA",
+    "Email": "melike@gmail.com",
+    "Password": "1",
+    "Opening Balance": "800\u20ac",
+    "Current Balance": "800\u20ac"
+  },
+  {
+    "Customer_ID": "502507",
+    "Name": "Melike KAYA",
+    "Email": "melike@gmail.com",
+    "Password": "1",
+    "Opening Balance": "400\u20ac",
+    "Current Balance": "400\u20ac"
+  },
+  {
+    "Customer_ID": "888300",
+    "Name": "Melike KAYA",
+    "Email": "melike@gmail.com",
+    "Password": "1",
+    "Opening Balance": "500\u20ac",
+    "Current Balance": "500\u20ac"
   }
 ]
