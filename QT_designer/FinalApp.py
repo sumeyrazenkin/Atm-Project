@@ -128,7 +128,7 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
             for customer in pyfile:    
                 if self.CsId in customer["Customer_ID"] and self.CsPs in customer["Password"]:
                     try:
-                        CSMain.ID = self.CsId
+                        CSMain.ID = self.CsId                        
                         print("Successfully logged in")
                         file = f"QT_designer/customer_database/{self.CsId}.csv"
                         with open (file, "r") as f:
@@ -259,13 +259,12 @@ class CSinfo(QMainWindow, Ui_customer_statement_window):
         super(CSinfo, self).__init__()
         self.setupUi(self)
         self.csstatementwdw_btn_returnmain.clicked.connect(self.return_back)
+
     def return_back(self):
         csmain = CSMain()
-        cslogin = CsLogin()
         widget.addWidget(csmain)
         widget.setCurrentIndex(widget.currentIndex()+1)
         csmain.csmainwdw_lbl_CSID_show.setText(csmain.ID)
-        # csmain.csmainwdw_lbl_CSname_show.setText(cslogin.csafterlogin.name)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
