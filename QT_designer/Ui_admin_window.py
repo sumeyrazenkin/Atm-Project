@@ -14,61 +14,124 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_admin_window(object):
     def setupUi(self, admin_window):
         admin_window.setObjectName("admin_window")
-        admin_window.resize(480, 600)
+        admin_window.resize(588, 687)
+        admin_window.setStyleSheet("background-color: rgb(5, 130, 202);\n"
+"")
         self.centralwidget = QtWidgets.QWidget(admin_window)
         self.centralwidget.setObjectName("centralwidget")
         self.adminwdw_lbl_heading = QtWidgets.QLabel(self.centralwidget)
-        self.adminwdw_lbl_heading.setGeometry(QtCore.QRect(120, 60, 251, 61))
+        self.adminwdw_lbl_heading.setGeometry(QtCore.QRect(0, 0, 581, 101))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(26)
+        font.setBold(True)
+        font.setWeight(75)
         self.adminwdw_lbl_heading.setFont(font)
         self.adminwdw_lbl_heading.setAlignment(QtCore.Qt.AlignCenter)
         self.adminwdw_lbl_heading.setObjectName("adminwdw_lbl_heading")
         self.adminwdw_lbl_ADid = QtWidgets.QLabel(self.centralwidget)
         self.adminwdw_lbl_ADid.setGeometry(QtCore.QRect(140, 140, 41, 31))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.adminwdw_lbl_ADid.setFont(font)
         self.adminwdw_lbl_ADid.setObjectName("adminwdw_lbl_ADid")
         self.adminwdw_lbl_ADpassword = QtWidgets.QLabel(self.centralwidget)
-        self.adminwdw_lbl_ADpassword.setGeometry(QtCore.QRect(140, 220, 91, 31))
+        self.adminwdw_lbl_ADpassword.setGeometry(QtCore.QRect(140, 250, 141, 31))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.adminwdw_lbl_ADpassword.setFont(font)
         self.adminwdw_lbl_ADpassword.setObjectName("adminwdw_lbl_ADpassword")
         self.adminwdw_btn_login = QtWidgets.QPushButton(self.centralwidget)
-        self.adminwdw_btn_login.setGeometry(QtCore.QRect(170, 330, 131, 51))
+        self.adminwdw_btn_login.setGeometry(QtCore.QRect(210, 390, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.adminwdw_btn_login.setFont(font)
+        self.adminwdw_btn_login.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(0, 100, 148);\n"
+"\n"
+"border:2px solid rgb(0, 150, 199);\n"
+"border-radius:20px;\n"
+"border-color:black;\n"
+"}\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(0, 150, 199);\n"
+"}")
         self.adminwdw_btn_login.setObjectName("adminwdw_btn_login")
         self.adminwdw_linedit_ADid = QtWidgets.QLineEdit(self.centralwidget)
-        self.adminwdw_linedit_ADid.setGeometry(QtCore.QRect(140, 180, 211, 31))
+        self.adminwdw_linedit_ADid.setGeometry(QtCore.QRect(140, 180, 231, 41))
+        self.adminwdw_linedit_ADid.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.adminwdw_linedit_ADid.setObjectName("adminwdw_linedit_ADid")
         self.adminwdw_linedit_ADpassword = QtWidgets.QLineEdit(self.centralwidget)
-        self.adminwdw_linedit_ADpassword.setGeometry(QtCore.QRect(140, 260, 211, 31))
+        self.adminwdw_linedit_ADpassword.setGeometry(QtCore.QRect(140, 300, 231, 41))
+        self.adminwdw_linedit_ADpassword.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.adminwdw_linedit_ADpassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.adminwdw_linedit_ADpassword.setObjectName("adminwdw_linedit_ADpassword")
         self.adminwdw_btn_returnmain = QtWidgets.QPushButton(self.centralwidget)
-        self.adminwdw_btn_returnmain.setGeometry(QtCore.QRect(90, 440, 131, 41))
+        self.adminwdw_btn_returnmain.setGeometry(QtCore.QRect(100, 490, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.adminwdw_btn_returnmain.setFont(font)
+        self.adminwdw_btn_returnmain.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.adminwdw_btn_returnmain.setObjectName("adminwdw_btn_returnmain")
         self.adminwdw_btn_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.adminwdw_btn_exit.setGeometry(QtCore.QRect(260, 440, 131, 41))
+        self.adminwdw_btn_exit.setGeometry(QtCore.QRect(310, 490, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.adminwdw_btn_exit.setFont(font)
+        self.adminwdw_btn_exit.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.adminwdw_btn_exit.setObjectName("adminwdw_btn_exit")
         self.adminwdw_lbl_warning = QtWidgets.QLabel(self.centralwidget)
-        self.adminwdw_lbl_warning.setGeometry(QtCore.QRect(140, 300, 211, 16))
+        self.adminwdw_lbl_warning.setGeometry(QtCore.QRect(140, 280, 211, 16))
         self.adminwdw_lbl_warning.setStyleSheet("color: rgb(255, 38, 0);")
         self.adminwdw_lbl_warning.setText("")
         self.adminwdw_lbl_warning.setObjectName("adminwdw_lbl_warning")
         admin_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(admin_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 588, 26))
         self.menubar.setObjectName("menubar")
         admin_window.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(admin_window)
@@ -86,5 +149,5 @@ class Ui_admin_window(object):
         self.adminwdw_lbl_ADid.setText(_translate("admin_window", "ID:"))
         self.adminwdw_lbl_ADpassword.setText(_translate("admin_window", "Password:"))
         self.adminwdw_btn_login.setText(_translate("admin_window", "LOGIN"))
-        self.adminwdw_btn_returnmain.setText(_translate("admin_window", "Main Window"))
+        self.adminwdw_btn_returnmain.setText(_translate("admin_window", "Back"))
         self.adminwdw_btn_exit.setText(_translate("admin_window", "Exit"))

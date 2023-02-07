@@ -1,6 +1,0 @@
-Date,Transaction Type,Amount,Current Balance
-"06/02/2023, 22:12:47",New Account,200€,200€
-"06/02/2023, 22:13:00",Deposit,300€,500€
-"06/02/2023, 22:13:02",Withdraw,200€,300€
-"06/02/2023, 22:13:04",Deposit,600€,900€
-"06/02/2023, 22:13:05",Withdraw,600€,300€

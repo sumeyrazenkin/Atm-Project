@@ -15,53 +15,95 @@ class Ui_customer_statement_window(object):
     def setupUi(self, customer_statement_window):
         customer_statement_window.setObjectName("customer_statement_window")
         customer_statement_window.setWindowModality(QtCore.Qt.ApplicationModal)
-        customer_statement_window.resize(480, 600)
+        customer_statement_window.resize(588, 687)
         customer_statement_window.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         customer_statement_window.setAcceptDrops(False)
+        customer_statement_window.setStyleSheet("background-color: rgb(5, 130, 202);")
         customer_statement_window.setInputMethodHints(QtCore.Qt.ImhNone)
         self.centralwidget = QtWidgets.QWidget(customer_statement_window)
         self.centralwidget.setObjectName("centralwidget")
         self.csstatementwdw_lbl_heading = QtWidgets.QLabel(self.centralwidget)
-        self.csstatementwdw_lbl_heading.setGeometry(QtCore.QRect(40, 20, 391, 41))
+        self.csstatementwdw_lbl_heading.setGeometry(QtCore.QRect(30, 0, 541, 41))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(26)
+        font.setBold(True)
+        font.setWeight(75)
         self.csstatementwdw_lbl_heading.setFont(font)
         self.csstatementwdw_lbl_heading.setAlignment(QtCore.Qt.AlignCenter)
         self.csstatementwdw_lbl_heading.setObjectName("csstatementwdw_lbl_heading")
         self.csstatementwdw_btn_returnmain = QtWidgets.QPushButton(self.centralwidget)
-        self.csstatementwdw_btn_returnmain.setGeometry(QtCore.QRect(40, 500, 131, 41))
+        self.csstatementwdw_btn_returnmain.setEnabled(True)
+        self.csstatementwdw_btn_returnmain.setGeometry(QtCore.QRect(100, 560, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csstatementwdw_btn_returnmain.setFont(font)
+        self.csstatementwdw_btn_returnmain.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.csstatementwdw_btn_returnmain.setObjectName("csstatementwdw_btn_returnmain")
         self.csstatementwdw_btn_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.csstatementwdw_btn_exit.setGeometry(QtCore.QRect(320, 500, 131, 41))
+        self.csstatementwdw_btn_exit.setGeometry(QtCore.QRect(320, 560, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csstatementwdw_btn_exit.setFont(font)
+        self.csstatementwdw_btn_exit.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.csstatementwdw_btn_exit.setObjectName("csstatementwdw_btn_exit")
         self.csstatementwdw_lbl_balanceheading = QtWidgets.QLabel(self.centralwidget)
-        self.csstatementwdw_lbl_balanceheading.setGeometry(QtCore.QRect(40, 60, 191, 31))
+        self.csstatementwdw_lbl_balanceheading.setGeometry(QtCore.QRect(20, 80, 288, 36))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csstatementwdw_lbl_balanceheading.setFont(font)
         self.csstatementwdw_lbl_balanceheading.setObjectName("csstatementwdw_lbl_balanceheading")
         self.csstatementwdw_lbl_balanceshow = QtWidgets.QLabel(self.centralwidget)
-        self.csstatementwdw_lbl_balanceshow.setGeometry(QtCore.QRect(250, 60, 191, 31))
+        self.csstatementwdw_lbl_balanceshow.setGeometry(QtCore.QRect(510, 80, 51, 36))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csstatementwdw_lbl_balanceshow.setFont(font)
         self.csstatementwdw_lbl_balanceshow.setTextFormat(QtCore.Qt.AutoText)
         self.csstatementwdw_lbl_balanceshow.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.csstatementwdw_lbl_balanceshow.setObjectName("csstatementwdw_lbl_balanceshow")
-        self.csstatementwdw_btn_returnmain_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.csstatementwdw_btn_returnmain_2.setGeometry(QtCore.QRect(180, 500, 131, 41))
-        font = QtGui.QFont()
-        font.setPointSize(18)
-        self.csstatementwdw_btn_returnmain_2.setFont(font)
-        self.csstatementwdw_btn_returnmain_2.setObjectName("csstatementwdw_btn_returnmain_2")
         self.csstatementwdw_tbl_statement = QtWidgets.QTableWidget(self.centralwidget)
-        self.csstatementwdw_tbl_statement.setGeometry(QtCore.QRect(40, 100, 411, 381))
+        self.csstatementwdw_tbl_statement.setGeometry(QtCore.QRect(20, 150, 551, 381))
+        self.csstatementwdw_tbl_statement.setStyleSheet("background-color: rgb(240, 239, 235);")
         self.csstatementwdw_tbl_statement.setObjectName("csstatementwdw_tbl_statement")
         self.csstatementwdw_tbl_statement.setColumnCount(4)
         self.csstatementwdw_tbl_statement.setRowCount(0)
@@ -73,9 +115,13 @@ class Ui_customer_statement_window(object):
         self.csstatementwdw_tbl_statement.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.csstatementwdw_tbl_statement.setHorizontalHeaderItem(3, item)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(390, 80, 91, 21))
+        self.label.setText("")
+        self.label.setObjectName("label")
         customer_statement_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(customer_statement_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 588, 26))
         self.menubar.setObjectName("menubar")
         customer_statement_window.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(customer_statement_window)
@@ -89,12 +135,11 @@ class Ui_customer_statement_window(object):
     def retranslateUi(self, customer_statement_window):
         _translate = QtCore.QCoreApplication.translate
         customer_statement_window.setWindowTitle(_translate("customer_statement_window", "Customer Bank Statement"))
-        self.csstatementwdw_lbl_heading.setText(_translate("customer_statement_window", "Welcome to the Bank Statement"))
-        self.csstatementwdw_btn_returnmain.setText(_translate("customer_statement_window", "Main Window"))
+        self.csstatementwdw_lbl_heading.setText(_translate("customer_statement_window", "Bank Statement"))
+        self.csstatementwdw_btn_returnmain.setText(_translate("customer_statement_window", "Back"))
         self.csstatementwdw_btn_exit.setText(_translate("customer_statement_window", "Exit"))
         self.csstatementwdw_lbl_balanceheading.setText(_translate("customer_statement_window", "Your current balance:"))
         self.csstatementwdw_lbl_balanceshow.setText(_translate("customer_statement_window", "0 €"))
-        self.csstatementwdw_btn_returnmain_2.setText(_translate("customer_statement_window", "Customer Page"))
         item = self.csstatementwdw_tbl_statement.horizontalHeaderItem(0)
         item.setText(_translate("customer_statement_window", "Transaction Date"))
         item = self.csstatementwdw_tbl_statement.horizontalHeaderItem(1)

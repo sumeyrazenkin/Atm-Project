@@ -15,46 +15,94 @@ class Ui_customer_main_window(object):
     def setupUi(self, customer_main_window):
         customer_main_window.setObjectName("customer_main_window")
         customer_main_window.setWindowModality(QtCore.Qt.ApplicationModal)
-        customer_main_window.resize(480, 600)
+        customer_main_window.resize(588, 687)
         customer_main_window.setMinimumSize(QtCore.QSize(480, 600))
         customer_main_window.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         customer_main_window.setAcceptDrops(False)
+        customer_main_window.setStyleSheet("background-color: rgb(5, 130, 202);")
         customer_main_window.setInputMethodHints(QtCore.Qt.ImhNone)
         self.centralwidget = QtWidgets.QWidget(customer_main_window)
         self.centralwidget.setObjectName("centralwidget")
         self.csmainwdw_lbl_heading = QtWidgets.QLabel(self.centralwidget)
-        self.csmainwdw_lbl_heading.setGeometry(QtCore.QRect(40, 10, 391, 61))
+        self.csmainwdw_lbl_heading.setGeometry(QtCore.QRect(0, 0, 581, 91))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(26)
+        font.setBold(True)
+        font.setWeight(75)
         self.csmainwdw_lbl_heading.setFont(font)
         self.csmainwdw_lbl_heading.setAlignment(QtCore.Qt.AlignCenter)
         self.csmainwdw_lbl_heading.setObjectName("csmainwdw_lbl_heading")
         self.csmainwdw_btn_getcash = QtWidgets.QPushButton(self.centralwidget)
-        self.csmainwdw_btn_getcash.setGeometry(QtCore.QRect(40, 250, 181, 51))
+        self.csmainwdw_btn_getcash.setGeometry(QtCore.QRect(90, 330, 181, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csmainwdw_btn_getcash.setFont(font)
+        self.csmainwdw_btn_getcash.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(0, 100, 148);\n"
+"\n"
+"border:2px solid rgb(0, 150, 199);\n"
+"border-radius:20px;\n"
+"border-color:black;\n"
+"}\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(0, 150, 199);\n"
+"}")
         self.csmainwdw_btn_getcash.setObjectName("csmainwdw_btn_getcash")
         self.csmainwdw_btn_returnmain = QtWidgets.QPushButton(self.centralwidget)
-        self.csmainwdw_btn_returnmain.setGeometry(QtCore.QRect(90, 500, 131, 41))
+        self.csmainwdw_btn_returnmain.setGeometry(QtCore.QRect(90, 520, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csmainwdw_btn_returnmain.setFont(font)
+        self.csmainwdw_btn_returnmain.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.csmainwdw_btn_returnmain.setObjectName("csmainwdw_btn_returnmain")
         self.csmainwdw_btn_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.csmainwdw_btn_exit.setGeometry(QtCore.QRect(260, 500, 131, 41))
+        self.csmainwdw_btn_exit.setGeometry(QtCore.QRect(330, 520, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csmainwdw_btn_exit.setFont(font)
+        self.csmainwdw_btn_exit.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.csmainwdw_btn_exit.setObjectName("csmainwdw_btn_exit")
-        self.csmainwdw_lbl_balanceheading = QtWidgets.QLabel(self.centralwidget)
-        self.csmainwdw_lbl_balanceheading.setGeometry(QtCore.QRect(40, 120, 191, 31))
-        font = QtGui.QFont()
-        font.setPointSize(18)
-        self.csmainwdw_lbl_balanceheading.setFont(font)
-        self.csmainwdw_lbl_balanceheading.setObjectName("csmainwdw_lbl_balanceheading")
         self.csmainwdw_lbl_balanceshow = QtWidgets.QLabel(self.centralwidget)
-        self.csmainwdw_lbl_balanceshow.setGeometry(QtCore.QRect(250, 120, 171, 31))
+        self.csmainwdw_lbl_balanceshow.setGeometry(QtCore.QRect(280, 210, 181, 36))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.csmainwdw_lbl_balanceshow.setFont(font)
@@ -65,25 +113,69 @@ class Ui_customer_main_window(object):
         self.csmainwdw_lbl_balanceshow.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.csmainwdw_lbl_balanceshow.setObjectName("csmainwdw_lbl_balanceshow")
         self.csmainwdw_btn_deposit = QtWidgets.QPushButton(self.centralwidget)
-        self.csmainwdw_btn_deposit.setGeometry(QtCore.QRect(250, 250, 181, 51))
+        self.csmainwdw_btn_deposit.setGeometry(QtCore.QRect(290, 330, 181, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csmainwdw_btn_deposit.setFont(font)
+        self.csmainwdw_btn_deposit.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(0, 100, 148);\n"
+"\n"
+"border:2px solid rgb(0, 150, 199);\n"
+"border-radius:20px;\n"
+"border-color:black;\n"
+"}\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(0, 150, 199);\n"
+"}")
         self.csmainwdw_btn_deposit.setObjectName("csmainwdw_btn_deposit")
         self.csmainwdw_btn_moneyup = QtWidgets.QPushButton(self.centralwidget)
-        self.csmainwdw_btn_moneyup.setGeometry(QtCore.QRect(310, 190, 31, 31))
+        self.csmainwdw_btn_moneyup.setGeometry(QtCore.QRect(380, 270, 41, 41))
         font = QtGui.QFont()
         font.setPointSize(24)
         self.csmainwdw_btn_moneyup.setFont(font)
+        self.csmainwdw_btn_moneyup.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.csmainwdw_btn_moneyup.setObjectName("csmainwdw_btn_moneyup")
         self.csmainwdw_btn_moneydown = QtWidgets.QPushButton(self.centralwidget)
-        self.csmainwdw_btn_moneydown.setGeometry(QtCore.QRect(110, 190, 31, 31))
+        self.csmainwdw_btn_moneydown.setGeometry(QtCore.QRect(100, 270, 41, 41))
         font = QtGui.QFont()
         font.setPointSize(24)
         self.csmainwdw_btn_moneydown.setFont(font)
+        self.csmainwdw_btn_moneydown.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.csmainwdw_btn_moneydown.setObjectName("csmainwdw_btn_moneydown")
         self.csmainwdw_spinbox_money = QtWidgets.QSpinBox(self.centralwidget)
-        self.csmainwdw_spinbox_money.setGeometry(QtCore.QRect(170, 190, 121, 31))
+        self.csmainwdw_spinbox_money.setGeometry(QtCore.QRect(210, 270, 121, 31))
         self.csmainwdw_spinbox_money.setFocusPolicy(QtCore.Qt.WheelFocus)
         self.csmainwdw_spinbox_money.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
         self.csmainwdw_spinbox_money.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
@@ -95,36 +187,74 @@ class Ui_customer_main_window(object):
         self.csmainwdw_spinbox_money.setProperty("value", 0)
         self.csmainwdw_spinbox_money.setObjectName("csmainwdw_spinbox_money")
         self.csmainwdw_btn_statement = QtWidgets.QPushButton(self.centralwidget)
-        self.csmainwdw_btn_statement.setGeometry(QtCore.QRect(90, 410, 301, 51))
+        self.csmainwdw_btn_statement.setGeometry(QtCore.QRect(90, 450, 391, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csmainwdw_btn_statement.setFont(font)
+        self.csmainwdw_btn_statement.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(0, 100, 148);\n"
+"\n"
+"border:2px solid rgb(0, 150, 199);\n"
+"border-radius:20px;\n"
+"border-color:black;\n"
+"}\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(0, 150, 199);\n"
+"}")
         self.csmainwdw_btn_statement.setObjectName("csmainwdw_btn_statement")
-        self.csmainwdw_lbl_resultmessage = QtWidgets.QLabel(self.centralwidget)
-        self.csmainwdw_lbl_resultmessage.setGeometry(QtCore.QRect(80, 310, 311, 31))
-        self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
-        self.csmainwdw_lbl_resultmessage.setText("")
-        self.csmainwdw_lbl_resultmessage.setAlignment(QtCore.Qt.AlignCenter)
-        self.csmainwdw_lbl_resultmessage.setObjectName("csmainwdw_lbl_resultmessage")
-        self.csmainwdw_lbl_CSname_heading = QtWidgets.QLabel(self.centralwidget)
-        self.csmainwdw_lbl_CSname_heading.setGeometry(QtCore.QRect(50, 60, 131, 20))
-        self.csmainwdw_lbl_CSname_heading.setObjectName("csmainwdw_lbl_CSname_heading")
         self.csmainwdw_lbl_CSname_show = QtWidgets.QLabel(self.centralwidget)
-        self.csmainwdw_lbl_CSname_show.setGeometry(QtCore.QRect(270, 60, 151, 20))
+        self.csmainwdw_lbl_CSname_show.setGeometry(QtCore.QRect(280, 121, 161, 16))
         self.csmainwdw_lbl_CSname_show.setText("")
-        self.csmainwdw_lbl_CSname_show.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.csmainwdw_lbl_CSname_show.setObjectName("csmainwdw_lbl_CSname_show")
         self.csmainwdw_lbl_CSID_show = QtWidgets.QLabel(self.centralwidget)
-        self.csmainwdw_lbl_CSID_show.setGeometry(QtCore.QRect(270, 80, 151, 20))
+        self.csmainwdw_lbl_CSID_show.setGeometry(QtCore.QRect(280, 168, 161, 16))
         self.csmainwdw_lbl_CSID_show.setText("")
-        self.csmainwdw_lbl_CSID_show.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.csmainwdw_lbl_CSID_show.setObjectName("csmainwdw_lbl_CSID_show")
+        self.csmainwdw_lbl_CSname_heading = QtWidgets.QLabel(self.centralwidget)
+        self.csmainwdw_lbl_CSname_heading.setGeometry(QtCore.QRect(91, 121, 129, 21))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.csmainwdw_lbl_CSname_heading.setFont(font)
+        self.csmainwdw_lbl_CSname_heading.setObjectName("csmainwdw_lbl_CSname_heading")
+        self.csmainwdw_lbl_balanceheading = QtWidgets.QLabel(self.centralwidget)
+        self.csmainwdw_lbl_balanceheading.setGeometry(QtCore.QRect(91, 216, 257, 33))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.csmainwdw_lbl_balanceheading.setFont(font)
+        self.csmainwdw_lbl_balanceheading.setObjectName("csmainwdw_lbl_balanceheading")
         self.csmainwdw_lbl_CSID_heading = QtWidgets.QLabel(self.centralwidget)
-        self.csmainwdw_lbl_CSID_heading.setGeometry(QtCore.QRect(50, 80, 131, 20))
+        self.csmainwdw_lbl_CSID_heading.setGeometry(QtCore.QRect(91, 168, 100, 21))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.csmainwdw_lbl_CSID_heading.setFont(font)
         self.csmainwdw_lbl_CSID_heading.setObjectName("csmainwdw_lbl_CSID_heading")
+        self.csmainwdw_lbl_resultmessage = QtWidgets.QLabel(self.centralwidget)
+        self.csmainwdw_lbl_resultmessage.setGeometry(QtCore.QRect(90, 390, 381, 33))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.csmainwdw_lbl_resultmessage.setFont(font)
+        self.csmainwdw_lbl_resultmessage.setStyleSheet("")
+        self.csmainwdw_lbl_resultmessage.setText("")
+        self.csmainwdw_lbl_resultmessage.setObjectName("csmainwdw_lbl_resultmessage")
         customer_main_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(customer_main_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 588, 21))
         self.menubar.setObjectName("menubar")
         customer_main_window.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(customer_main_window)
@@ -140,14 +270,14 @@ class Ui_customer_main_window(object):
     def retranslateUi(self, customer_main_window):
         _translate = QtCore.QCoreApplication.translate
         customer_main_window.setWindowTitle(_translate("customer_main_window", "Customer Main Window"))
-        self.csmainwdw_lbl_heading.setText(_translate("customer_main_window", "Welcome to the account operations"))
+        self.csmainwdw_lbl_heading.setText(_translate("customer_main_window", "Account Operations"))
         self.csmainwdw_btn_getcash.setText(_translate("customer_main_window", "GET CASH"))
-        self.csmainwdw_btn_returnmain.setText(_translate("customer_main_window", "Main Window"))
+        self.csmainwdw_btn_returnmain.setText(_translate("customer_main_window", "Back"))
         self.csmainwdw_btn_exit.setText(_translate("customer_main_window", "Exit"))
-        self.csmainwdw_lbl_balanceheading.setText(_translate("customer_main_window", "Your current balance:"))
         self.csmainwdw_btn_deposit.setText(_translate("customer_main_window", "DEPOSIT"))
         self.csmainwdw_btn_moneyup.setText(_translate("customer_main_window", "+"))
         self.csmainwdw_btn_moneydown.setText(_translate("customer_main_window", "-"))
         self.csmainwdw_btn_statement.setText(_translate("customer_main_window", "VIEW BANK STATEMENT"))
-        self.csmainwdw_lbl_CSname_heading.setText(_translate("customer_main_window", "Customer Name   :"))
-        self.csmainwdw_lbl_CSID_heading.setText(_translate("customer_main_window", "Customer ID         :"))
+        self.csmainwdw_lbl_CSname_heading.setText(_translate("customer_main_window", "Customer Name:"))
+        self.csmainwdw_lbl_balanceheading.setText(_translate("customer_main_window", "Your current balance:"))
+        self.csmainwdw_lbl_CSID_heading.setText(_translate("customer_main_window", "Customer ID:"))

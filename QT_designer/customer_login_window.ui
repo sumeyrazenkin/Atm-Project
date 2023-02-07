@@ -6,26 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
+    <width>463</width>
     <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Customer Login Window</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(5, 130, 202);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="csloginwdw_lbl_heading">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>80</x>
       <y>60</y>
-      <width>251</width>
+      <width>321</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>24</pointsize>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -40,13 +46,16 @@
      <rect>
       <x>140</x>
       <y>140</y>
-      <width>121</width>
+      <width>181</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Bahnschrift SemiBold</family>
       <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -58,13 +67,16 @@
      <rect>
       <x>140</x>
       <y>220</y>
-      <width>91</width>
+      <width>141</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Bahnschrift SemiBold</family>
       <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -76,14 +88,30 @@
      <rect>
       <x>170</x>
       <y>330</y>
-      <width>131</width>
+      <width>151</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Bahnschrift SemiBold</family>
       <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgb(0, 100, 148);
+
+border:2px solid rgb(0, 150, 199);
+border-radius:20px;
+border-color:black;
+}
+QPushButton:hover {
+     background-color: rgb(202, 240, 248);
+     border:2px solid rgb(0, 150, 199);
+}</string>
     </property>
     <property name="text">
      <string>LOGIN</string>
@@ -98,6 +126,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="csloginwdw_linedit_ADpassword">
     <property name="geometry">
@@ -107,6 +138,9 @@
       <width>211</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -118,31 +152,71 @@
       <x>90</x>
       <y>440</y>
       <width>131</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Bahnschrift SemiBold</family>
       <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(0, 150, 199);
+   border-color: rgb(66, 167, 255);
+   border-bottom-color: rgb(255, 255, 255);
+   border:2px solid rgb(202, 240, 248);
+   border-radius:20px;
+   border-color: black;
+}
+
+QPushButton:hover {
+     background-color: rgb(202, 240, 248);
+     border:2px solid rgb(202, 240, 248);
+}
+    
+   </string>
+    </property>
     <property name="text">
-     <string>Main Window</string>
+     <string>Back</string>
     </property>
    </widget>
    <widget class="QPushButton" name="csloginwdw_btn_exit">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>250</x>
       <y>440</y>
       <width>131</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Bahnschrift SemiBold</family>
       <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(0, 150, 199);
+   border-color: rgb(66, 167, 255);
+   border-bottom-color: rgb(255, 255, 255);
+   border:2px solid rgb(202, 240, 248);
+   border-radius:20px;
+   border-color: black;
+}
+
+QPushButton:hover {
+     background-color: rgb(202, 240, 248);
+     border:2px solid rgb(202, 240, 248);
+}
+    
+   </string>
     </property>
     <property name="text">
      <string>Exit</string>
@@ -170,8 +244,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>480</width>
-     <height>21</height>
+     <width>463</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

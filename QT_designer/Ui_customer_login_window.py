@@ -14,52 +14,114 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_customer_login_window(object):
     def setupUi(self, customer_login_window):
         customer_login_window.setObjectName("customer_login_window")
-        customer_login_window.resize(480, 600)
+        customer_login_window.resize(463, 600)
+        customer_login_window.setStyleSheet("background-color: rgb(5, 130, 202);")
         self.centralwidget = QtWidgets.QWidget(customer_login_window)
         self.centralwidget.setObjectName("centralwidget")
         self.csloginwdw_lbl_heading = QtWidgets.QLabel(self.centralwidget)
-        self.csloginwdw_lbl_heading.setGeometry(QtCore.QRect(120, 60, 251, 61))
+        self.csloginwdw_lbl_heading.setGeometry(QtCore.QRect(80, 60, 321, 61))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(26)
+        font.setBold(True)
+        font.setWeight(75)
         self.csloginwdw_lbl_heading.setFont(font)
         self.csloginwdw_lbl_heading.setAlignment(QtCore.Qt.AlignCenter)
         self.csloginwdw_lbl_heading.setObjectName("csloginwdw_lbl_heading")
         self.csloginwdw_lbl_ADid = QtWidgets.QLabel(self.centralwidget)
-        self.csloginwdw_lbl_ADid.setGeometry(QtCore.QRect(140, 140, 121, 31))
+        self.csloginwdw_lbl_ADid.setGeometry(QtCore.QRect(140, 140, 181, 31))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csloginwdw_lbl_ADid.setFont(font)
         self.csloginwdw_lbl_ADid.setObjectName("csloginwdw_lbl_ADid")
         self.csloginwdw_lbl_ADpassword = QtWidgets.QLabel(self.centralwidget)
-        self.csloginwdw_lbl_ADpassword.setGeometry(QtCore.QRect(140, 220, 91, 31))
+        self.csloginwdw_lbl_ADpassword.setGeometry(QtCore.QRect(140, 220, 141, 31))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csloginwdw_lbl_ADpassword.setFont(font)
         self.csloginwdw_lbl_ADpassword.setObjectName("csloginwdw_lbl_ADpassword")
         self.csloginwdw_btn_login = QtWidgets.QPushButton(self.centralwidget)
-        self.csloginwdw_btn_login.setGeometry(QtCore.QRect(170, 330, 131, 51))
+        self.csloginwdw_btn_login.setGeometry(QtCore.QRect(170, 330, 151, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csloginwdw_btn_login.setFont(font)
+        self.csloginwdw_btn_login.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(0, 100, 148);\n"
+"\n"
+"border:2px solid rgb(0, 150, 199);\n"
+"border-radius:20px;\n"
+"border-color:black;\n"
+"}\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(0, 150, 199);\n"
+"}")
         self.csloginwdw_btn_login.setObjectName("csloginwdw_btn_login")
         self.csloginwdw_linedit_ADid = QtWidgets.QLineEdit(self.centralwidget)
         self.csloginwdw_linedit_ADid.setGeometry(QtCore.QRect(140, 180, 211, 31))
+        self.csloginwdw_linedit_ADid.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.csloginwdw_linedit_ADid.setObjectName("csloginwdw_linedit_ADid")
         self.csloginwdw_linedit_ADpassword = QtWidgets.QLineEdit(self.centralwidget)
         self.csloginwdw_linedit_ADpassword.setGeometry(QtCore.QRect(140, 260, 211, 31))
+        self.csloginwdw_linedit_ADpassword.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.csloginwdw_linedit_ADpassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.csloginwdw_linedit_ADpassword.setObjectName("csloginwdw_linedit_ADpassword")
         self.csloginwdw_btn_returnmain = QtWidgets.QPushButton(self.centralwidget)
-        self.csloginwdw_btn_returnmain.setGeometry(QtCore.QRect(90, 440, 131, 41))
+        self.csloginwdw_btn_returnmain.setGeometry(QtCore.QRect(90, 440, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csloginwdw_btn_returnmain.setFont(font)
+        self.csloginwdw_btn_returnmain.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.csloginwdw_btn_returnmain.setObjectName("csloginwdw_btn_returnmain")
         self.csloginwdw_btn_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.csloginwdw_btn_exit.setGeometry(QtCore.QRect(260, 440, 131, 41))
+        self.csloginwdw_btn_exit.setGeometry(QtCore.QRect(250, 440, 131, 51))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.csloginwdw_btn_exit.setFont(font)
+        self.csloginwdw_btn_exit.setStyleSheet("QPushButton {\n"
+"background-color: rgb(0, 150, 199);\n"
+"   border-color: rgb(66, 167, 255);\n"
+"   border-bottom-color: rgb(255, 255, 255);\n"
+"   border:2px solid rgb(202, 240, 248);\n"
+"   border-radius:20px;\n"
+"   border-color: black;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"     background-color: rgb(202, 240, 248);\n"
+"     border:2px solid rgb(202, 240, 248);\n"
+"}\n"
+"    \n"
+"   ")
         self.csloginwdw_btn_exit.setObjectName("csloginwdw_btn_exit")
         self.csloginwdw_lbl_warning = QtWidgets.QLabel(self.centralwidget)
         self.csloginwdw_lbl_warning.setGeometry(QtCore.QRect(140, 300, 211, 16))
@@ -68,7 +130,7 @@ class Ui_customer_login_window(object):
         self.csloginwdw_lbl_warning.setObjectName("csloginwdw_lbl_warning")
         customer_login_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(customer_login_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 463, 26))
         self.menubar.setObjectName("menubar")
         customer_login_window.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(customer_login_window)
@@ -86,5 +148,5 @@ class Ui_customer_login_window(object):
         self.csloginwdw_lbl_ADid.setText(_translate("customer_login_window", "Customer ID:"))
         self.csloginwdw_lbl_ADpassword.setText(_translate("customer_login_window", "Password:"))
         self.csloginwdw_btn_login.setText(_translate("customer_login_window", "LOGIN"))
-        self.csloginwdw_btn_returnmain.setText(_translate("customer_login_window", "Main Window"))
+        self.csloginwdw_btn_returnmain.setText(_translate("customer_login_window", "Back"))
         self.csloginwdw_btn_exit.setText(_translate("customer_login_window", "Exit"))

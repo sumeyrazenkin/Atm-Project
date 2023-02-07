@@ -194,44 +194,49 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         
     def deposit(self):
         self.take_balance()
-        if self.csmainwdw_spinbox_money.value() > 0:
-            b = int(self.balance)
-            b += self.csmainwdw_spinbox_money.value()
-            self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
-            self.csmainwdw_lbl_resultmessage.setText("Successful deposit to the account")
-
-            file = f"QT_designer/customer_database/{self.ID}.csv"
-            with open (file, "a", newline="\n") as f:
-                writer = csv.writer(f)
-                writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Deposit", str(self.csmainwdw_spinbox_money.value())+"€", str(b)+"€"])
-                self.csmainwdw_lbl_balanceshow.setText(f"{str(b)} €")
-
-        else:
-            self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
-            self.csmainwdw_lbl_resultmessage.setText("Please enter an amount..")
-
-    def get_cash(self):
-        self.take_balance()
-        if self.csmainwdw_spinbox_money.value() > 0:
-            c = int(self.balance)
-            if c >= self.csmainwdw_spinbox_money.value():
-                c -= self.csmainwdw_spinbox_money.value()
+        try:
+            if self.csmainwdw_spinbox_money.value() > 0:
+                b = int(self.balance)
+                b += self.csmainwdw_spinbox_money.value()
                 self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
-                self.csmainwdw_lbl_resultmessage.setText("Successful withdraw from the account")
-                
+                self.csmainwdw_lbl_resultmessage.setText("Successful deposit to the account")
+
                 file = f"QT_designer/customer_database/{self.ID}.csv"
                 with open (file, "a", newline="\n") as f:
                     writer = csv.writer(f)
-                    writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Withdraw", str(self.csmainwdw_spinbox_money.value())+"€", str(c)+"€"])
-                    self.csmainwdw_lbl_balanceshow.setText(f"{str(c)} €")
+                    writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Deposit", str(self.csmainwdw_spinbox_money.value())+"€", str(b)+"€"])
+                    self.csmainwdw_lbl_balanceshow.setText(f"{str(b)} €")
+
             else:
                 self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
-                self.csmainwdw_lbl_resultmessage.setText("Non-sufficient funds in the account..")
+                self.csmainwdw_lbl_resultmessage.setText("Please enter an amount..")
+        except:
+            print("error")
+    def get_cash(self):
+        self.take_balance()
+        try: 
+            if self.csmainwdw_spinbox_money.value() > 0:
+                c = int(self.balance)
+                if c >= self.csmainwdw_spinbox_money.value():
+                    c -= self.csmainwdw_spinbox_money.value()
+                    self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
+                    self.csmainwdw_lbl_resultmessage.setText("Successful withdraw from the account")
+                    
+                    file = f"QT_designer/customer_database/{self.ID}.csv"
+                    with open (file, "a", newline="\n") as f:
+                        writer = csv.writer(f)
+                        writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Withdraw", str(self.csmainwdw_spinbox_money.value())+"€", str(c)+"€"])
+                        self.csmainwdw_lbl_balanceshow.setText(f"{str(c)} €")
+                else:
+                    self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
+                    self.csmainwdw_lbl_resultmessage.setText("Non-sufficient funds in the account..")
 
-        else:
-            self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
-            self.csmainwdw_lbl_resultmessage.setText("Please enter an amount to withdraw..")
-    
+            else:
+                self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
+                self.csmainwdw_lbl_resultmessage.setText("Please enter an amount to withdraw..")
+        except:
+            pass
+        
     def return_back(self):
         cslogin = CsLogin()
         widget.addWidget(cslogin)
