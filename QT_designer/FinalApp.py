@@ -35,6 +35,7 @@ class ADPreLogin(QMainWindow, Ui_admin_window):
         super(ADPreLogin, self).__init__()
         self.setupUi(self)
         self.adminwdw_btn_login.clicked.connect(self.adafterlogin)
+        self.adminwdw_btn_returnmain.clicked.connect(self.return_back)
     def adafterlogin(self):
         AdminID = self.adminwdw_linedit_ADid.text()
         ADpassword = self.adminwdw_linedit_ADpassword.text()
@@ -52,6 +53,10 @@ class ADPreLogin(QMainWindow, Ui_admin_window):
                 self.adminAfter.show()
             else:
                 self.adminwdw_lbl_warning.setText("Invalid ID or Password!")
+    def return_back(self):
+        main = Main_Window()
+        widget.addWidget(main)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
     def __init__(self):
@@ -62,7 +67,8 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_name.clear)
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear)
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_spinBox_balance.clear)
-        
+        self.admincswdw_btn_returnmain.clicked.connect(self.return_back)
+
     def createcustomer(self):
         CustomerID = random.randint(100000,999999)
         Name = self.admincswdw_linedit_name.text()
@@ -95,6 +101,10 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
                 statement = csv.writer(x)
                 statement.writerow(["Date", "Transaction Type", "Amount", "Current Balance"])
                 statement.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"New Account", CurrentBalance, CurrentBalance])   # type: ignore
+    def return_back(self):
+            ADlogin = ADPreLogin()
+            widget.addWidget(ADlogin)
+            widget.setCurrentIndex(widget.currentIndex()+1)
 
 class CsLogin(QMainWindow,Ui_customer_login_window):
     def __init__(self):
@@ -103,7 +113,7 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
         self.csloginwdw_btn_login.clicked.connect(self.csafterlogin)  
 
         self.csloginwdw_btn_exit.clicked.connect(self.close_l)
-        # self.csloginwdw_btn_returnmain.clicked.connect(self.Main_Window)
+        self.csloginwdw_btn_returnmain.clicked.connect(self.return_back)
         #self.csloginwdw_btn_returnmain.clicked.connect(Ui_customer_login_window.close)
 
     def csafterlogin(self):
@@ -117,29 +127,36 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
                 pyfile = json.load(f)
             for customer in pyfile:    
                 if self.CsId in customer["Customer_ID"] and self.CsPs in customer["Password"]:
-                    CSMain.ID = self.CsId
-                    print("Successfully logged in")
-                    file = f"QT_designer/customer_database/{self.CsId}.csv"
-                    with open (file, "r") as f:
-                        reader = csv.reader(f)
-                        all_rows = list(reader)
-                        last_row = all_rows[-1]
-                        current_element = last_row[-1]
-                        self.balance = current_element.split("€")[0]
-                    with open (file, "a", newline="\n") as f:
-                        writer = csv.writer(f)
-                        writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Logged in", "N/A", str(self.balance)+"€"])
                     try:
-                        self.csAfter = CSMain()
-                        widget.addWidget(self.csAfter)
-                        widget.setCurrentIndex(widget.currentIndex()+1)
-                        self.csAfter.show()
-                        self.csAfter.csmainwdw_lbl_CSname_show.setText(customer["Name"])
-                        self.csAfter.csmainwdw_lbl_CSID_show.setText(customer["Customer_ID"])
+                        CSMain.ID = self.CsId
+                        print("Successfully logged in")
+                        file = f"QT_designer/customer_database/{self.CsId}.csv"
+                        with open (file, "r") as f:
+                            reader = csv.reader(f)
+                            all_rows = list(reader)
+                            last_row = all_rows[-1]
+                            current_element = last_row[-1]
+                            self.balance = current_element.split("€")[0]
+                        with open (file, "a", newline="\n") as f:
+                            writer = csv.writer(f)
+                            writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Logged in", "N/A", str(self.balance)+"€"])
+                        try:
+                            self.csAfter = CSMain()
+                            widget.addWidget(self.csAfter)
+                            widget.setCurrentIndex(widget.currentIndex()+1)
+                            self.csAfter.show()
+                            self.csAfter.csmainwdw_lbl_CSname_show.setText(customer["Name"])
+                            self.csAfter.csmainwdw_lbl_CSID_show.setText(customer["Customer_ID"])
+                        except:
+                            print("error")
                     except:
                         print("error")
                 else:
                     self.csloginwdw_lbl_warning.setText("Invalid ID or Password!")
+    def return_back(self):
+            main = Main_Window()
+            widget.addWidget(main)
+            widget.setCurrentIndex(widget.currentIndex()+1)
 
     def close_l(self):
         sys.exit            
@@ -163,6 +180,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         self.csmainwdw_lbl_balanceshow.setText(f"{str(self.first_balance)} €")
         self.csmainwdw_btn_getcash.clicked.connect(self.get_cash)
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
+        self.csmainwdw_btn_returnmain.clicked.connect(self.return_back)
         self.csmainwdw_btn_statement.clicked.connect(self.show_statement)
         
     def take_balance(self):
@@ -214,6 +232,11 @@ class CSMain(QMainWindow, Ui_customer_main_window):
             self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(255, 0, 0);")
             self.csmainwdw_lbl_resultmessage.setText("Please enter an amount to withdraw..")
     
+    def return_back(self):
+        cslogin = CsLogin()
+        widget.addWidget(cslogin)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
     def show_statement(self):
         self.csstatement = CSinfo()
         widget.addWidget(self.csstatement)
@@ -235,7 +258,15 @@ class CSinfo(QMainWindow, Ui_customer_statement_window):
     def __init__(self):
         super(CSinfo, self).__init__()
         self.setupUi(self)
-        
+        self.csstatementwdw_btn_returnmain.clicked.connect(self.return_back)
+    def return_back(self):
+        csmain = CSMain()
+        cslogin = CsLogin()
+        widget.addWidget(csmain)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        csmain.csmainwdw_lbl_CSID_show.setText(csmain.ID)
+        # csmain.csmainwdw_lbl_CSname_show.setText(cslogin.csafterlogin.name)
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     mainwindow = Main_Window()
