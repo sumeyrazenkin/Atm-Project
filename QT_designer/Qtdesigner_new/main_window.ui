@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>open_window</class>
+ <widget class="QMainWindow" name="open_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>588</width>
+    <height>687</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(5, 130, 202);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="openwdw_lbl_welcome">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>561</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Welcome to the Banking App</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openwdw_btn_CSLogin">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold SemiConden</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgb(0, 100, 148);
+
+border:2px solid rgb(0, 150, 199);
+border-radius:20px;
+border-color:black;
+}
+QPushButton:hover {
+     background-color: rgb(202, 240, 248);
+     border:2px solid rgb(0, 150, 199);
+}</string>
+    </property>
+    <property name="text">
+     <string>CUSTOMER LOGIN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openwdw_btn_ADLogin">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>290</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(0, 100, 148);
+border:2px solid rgb(0, 150, 199);
+border-radius:20px;
+border-color:black;
+}
+QPushButton:hover {
+     background-color: rgb(202, 240, 248);
+     border:2px solid rgb(0, 150, 199);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>ADMIN LOGIN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openwdw_btn_exit">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>440</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgb(0, 150, 199);
+   border-color: rgb(66, 167, 255);
+   border-bottom-color: rgb(255, 255, 255);
+   border:2px solid rgb(202, 240, 248);
+   border-radius:20px;
+   border-color: black;
+}
+
+QPushButton:hover {
+     background-color: rgb(202, 240, 248);
+     border:2px solid rgb(202, 240, 248);
+}
+    
+   </string>
+    </property>
+    <property name="text">
+     <string>EXIT</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>588</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>openwdw_btn_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>open_window</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>393</x>
+     <y>561</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
