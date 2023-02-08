@@ -52,8 +52,8 @@
     </property>
     <property name="font">
      <font>
-      <family>.AppleSystemUIFont</family>
-      <pointsize>32</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>20</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -183,20 +183,27 @@ QPushButton:hover {
       <height>0</height>
      </size>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(202, 240, 248);</string>
     </property>
-    <attribute name="horizontalHeaderMinimumSectionSize">
-     <number>43</number>
-    </attribute>
     <attribute name="horizontalHeaderDefaultSectionSize">
      <number>136</number>
     </attribute>
-    <attribute name="verticalHeaderMinimumSectionSize">
-     <number>28</number>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>43</number>
     </attribute>
     <attribute name="verticalHeaderDefaultSectionSize">
      <number>30</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>28</number>
     </attribute>
     <column>
      <property name="text">
@@ -204,7 +211,7 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>16</pointsize>
+       <pointsize>10</pointsize>
       </font>
      </property>
      <property name="textAlignment">
@@ -217,7 +224,7 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>16</pointsize>
+       <pointsize>10</pointsize>
       </font>
      </property>
      <property name="textAlignment">
@@ -230,7 +237,7 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>16</pointsize>
+       <pointsize>10</pointsize>
       </font>
      </property>
      <property name="textAlignment">
@@ -243,7 +250,7 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>16</pointsize>
+       <pointsize>10</pointsize>
       </font>
      </property>
      <property name="textAlignment">
@@ -306,7 +313,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

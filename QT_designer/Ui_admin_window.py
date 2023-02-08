@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/melike/Documents/GitHub/Atm-Project/QT_designer/admin_window.ui'
+# Form implementation generated from reading ui file 'c:\Users\90506\Documents\GitHub\Atm-Project\QT_designer\admin_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -24,8 +24,8 @@ class Ui_admin_window(object):
         self.adminwdw_lbl_heading = QtWidgets.QLabel(self.centralwidget)
         self.adminwdw_lbl_heading.setGeometry(QtCore.QRect(50, 40, 491, 101))
         font = QtGui.QFont()
-        font.setFamily(".AppleSystemUIFont")
-        font.setPointSize(32)
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
         self.adminwdw_lbl_heading.setFont(font)
@@ -144,7 +144,7 @@ class Ui_admin_window(object):
         self.verticalLayout.addWidget(self.adminwdw_lbl_warning)
         admin_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(admin_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 600, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 600, 26))
         self.menubar.setObjectName("menubar")
         admin_window.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(admin_window)

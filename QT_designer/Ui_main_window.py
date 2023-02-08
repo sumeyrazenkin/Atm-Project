@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/melike/Documents/GitHub/Atm-Project/QT_designer/main_window.ui'
+# Form implementation generated from reading ui file 'c:\Users\90506\Documents\GitHub\Atm-Project\QT_designer\main_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -23,8 +23,8 @@ class Ui_open_window(object):
         self.openwdw_lbl_welcome = QtWidgets.QLabel(self.centralwidget)
         self.openwdw_lbl_welcome.setGeometry(QtCore.QRect(30, 60, 541, 111))
         font = QtGui.QFont()
-        font.setFamily(".AppleSystemUIFont")
-        font.setPointSize(32)
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
         self.openwdw_lbl_welcome.setFont(font)
@@ -102,7 +102,7 @@ class Ui_open_window(object):
         self.openwdw_btn_exit.setObjectName("openwdw_btn_exit")
         open_window.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(open_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 600, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 600, 26))
         self.menubar.setObjectName("menubar")
         open_window.setMenuBar(self.menubar)
 

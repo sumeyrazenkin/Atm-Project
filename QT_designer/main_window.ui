@@ -40,8 +40,8 @@
     </property>
     <property name="font">
      <font>
-      <family>.AppleSystemUIFont</family>
-      <pointsize>32</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>20</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -202,7 +202,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

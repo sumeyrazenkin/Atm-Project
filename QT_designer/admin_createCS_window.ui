@@ -28,8 +28,8 @@
     </property>
     <property name="font">
      <font>
-      <family>.AppleSystemUIFont</family>
-      <pointsize>32</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>20</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -236,8 +236,8 @@ font: 24pt &quot;.AppleSystemUIFont&quot;;</string>
       <widget class="QLabel" name="admincswdw_lbl_name">
        <property name="font">
         <font>
-         <family>.AppleSystemUIFont</family>
-         <pointsize>18</pointsize>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -273,8 +273,8 @@ font: 24pt &quot;.AppleSystemUIFont&quot;;</string>
       <widget class="QLabel" name="admincswdw_lbl_email">
        <property name="font">
         <font>
-         <family>.AppleSystemUIFont</family>
-         <pointsize>18</pointsize>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -310,7 +310,7 @@ font: 24pt &quot;.AppleSystemUIFont&quot;;</string>
      <rect>
       <x>340</x>
       <y>110</y>
-      <width>201</width>
+      <width>255</width>
       <height>231</height>
      </rect>
     </property>
@@ -319,8 +319,8 @@ font: 24pt &quot;.AppleSystemUIFont&quot;;</string>
       <widget class="QLabel" name="admincswdw_lbl_balance">
        <property name="font">
         <font>
-         <family>.AppleSystemUIFont</family>
-         <pointsize>18</pointsize>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -365,8 +365,8 @@ font: 24pt &quot;.AppleSystemUIFont&quot;;</string>
       <widget class="QLabel" name="admincswdw_lbl_password">
        <property name="font">
         <font>
-         <family>.AppleSystemUIFont</family>
-         <pointsize>18</pointsize>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -407,7 +407,7 @@ font: 24pt &quot;.AppleSystemUIFont&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>588</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
