@@ -39,20 +39,21 @@ class ADPreLogin(QMainWindow, Ui_admin_window):
     def adafterlogin(self):
         AdminID = self.adminwdw_linedit_ADid.text()
         ADpassword = self.adminwdw_linedit_ADpassword.text()
-        if len(AdminID) == 0 or ADpassword == 0:
+        if len(AdminID) == 0 or len(ADpassword) == 0:
             self.adminwdw_lbl_warning.setText("Please fill the required fields!")
         else:
             file = r"QT_designer/AdminLogInfo/admin.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
-            if AdminID == pyfile[0]["adminID"] and ADpassword == pyfile[0]["adpassword"]: #buraya bir for dongusu yazilarak baska adminler icin giris yapilmasi saglanabilir.
-                print("Successfully logged in")
-                self.adminAfter = ADAfterLogin()
-                widget.addWidget(self.adminAfter)
-                widget.setCurrentIndex(widget.currentIndex()+1)
-                self.adminAfter.show()
-            else:
-                self.adminwdw_lbl_warning.setText("Invalid ID or Password!")
+            for admin in pyfile:
+                if AdminID == admin["adminID"] and ADpassword == admin["adpassword"]:
+                    print("Successfully logged in")
+                    self.adminAfter = ADAfterLogin()
+                    widget.addWidget(self.adminAfter)
+                    widget.setCurrentIndex(widget.currentIndex()+1)
+                    self.adminAfter.show()
+                else:
+                    self.adminwdw_lbl_warning.setText("Invalid ID or Password!")
     def return_back(self):
         main = Main_Window()
         widget.addWidget(main)
@@ -78,6 +79,8 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         Email = self.admincswdw_linedit_email.text()
         Password = self.admincswdw_linedit_CSpassword_2.text()
         CurrentBalance = self.admincswdw_spinBox_balance.text()
+        if  len(Name) == 0 or len(Email) == 0 or len(Password) == 0:
+            self.admincswdw_lbl_result.setText("Please fill all the fields!")
         if CustomerID and Name and Email and Password:
             file = "QT_designer/customer_database/customers.json"
             customers = {}
@@ -129,7 +132,7 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
             with open (file, "r") as f:
                 pyfile = json.load(f)
             for customer in pyfile:    
-                if self.CsId in customer["Customer_ID"] and self.CsPs in customer["Password"]:
+                if self.CsId == customer["Customer_ID"] and self.CsPs == customer["Password"]:
                     try:
                         CSMain.ID = self.CsId                        
                         print("Successfully logged in")
