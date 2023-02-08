@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>588</width>
-    <height>687</height>
+    <width>600</width>
+    <height>700</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>700</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Admin Window</string>
@@ -21,16 +33,16 @@
    <widget class="QLabel" name="adminwdw_lbl_heading">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>581</width>
+      <x>50</x>
+      <y>40</y>
+      <width>491</width>
       <height>101</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>26</pointsize>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>32</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -42,55 +54,13 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="adminwdw_lbl_ADid">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>140</y>
-      <width>41</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>18</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>ID:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="adminwdw_lbl_ADpassword">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>250</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>18</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Password:</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="adminwdw_btn_login">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>390</y>
-      <width>131</width>
-      <height>51</height>
+      <x>200</x>
+      <y>430</y>
+      <width>200</width>
+      <height>70</height>
      </rect>
     </property>
     <property name="font">
@@ -118,43 +88,20 @@ QPushButton:hover {
      <string>LOGIN</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="adminwdw_linedit_ADid">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>180</y>
-      <width>231</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="adminwdw_linedit_ADpassword">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>300</y>
-      <width>231</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
-    </property>
-   </widget>
    <widget class="QPushButton" name="adminwdw_btn_returnmain">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>490</y>
-      <width>131</width>
-      <height>51</height>
+      <x>110</x>
+      <y>540</y>
+      <width>180</width>
+      <height>70</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>70</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -189,9 +136,9 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>490</y>
-      <width>131</width>
-      <height>51</height>
+      <y>540</y>
+      <width>180</width>
+      <height>70</height>
      </rect>
     </property>
     <property name="font">
@@ -223,21 +170,98 @@ QPushButton:hover {
      <string>Exit</string>
     </property>
    </widget>
-   <widget class="QLabel" name="adminwdw_lbl_warning">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>280</y>
-      <width>211</width>
-      <height>16</height>
+      <x>171</x>
+      <y>160</y>
+      <width>271</width>
+      <height>241</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 38, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="adminwdw_lbl_ADid">
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>ID:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="adminwdw_linedit_ADid">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="adminwdw_lbl_ADpassword">
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Password:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="adminwdw_linedit_ADpassword">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="adminwdw_lbl_warning">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 38, 0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -245,30 +269,13 @@ QPushButton:hover {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>588</width>
-     <height>26</height>
+     <width>600</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>adminwdw_btn_exit</sender>
-   <signal>clicked()</signal>
-   <receiver>admin_window</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>380</x>
-     <y>489</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>447</x>
-     <y>571</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

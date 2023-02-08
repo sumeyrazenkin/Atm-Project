@@ -9,9 +9,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>588</width>
-    <height>687</height>
+    <width>600</width>
+    <height>700</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>700</height>
+   </size>
   </property>
   <property name="contextMenuPolicy">
    <enum>Qt::DefaultContextMenu</enum>
@@ -33,15 +45,15 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>0</y>
+      <y>20</y>
       <width>541</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>26</pointsize>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>32</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -59,11 +71,23 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>560</y>
-      <width>131</width>
-      <height>51</height>
+      <x>110</x>
+      <y>540</y>
+      <width>180</width>
+      <height>70</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>180</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>180</width>
+      <height>70</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -97,11 +121,23 @@ QPushButton:hover {
    <widget class="QPushButton" name="csstatementwdw_btn_exit">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>560</y>
-      <width>131</width>
-      <height>51</height>
+      <x>310</x>
+      <y>540</y>
+      <width>180</width>
+      <height>70</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>180</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>180</width>
+      <height>16777215</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -132,99 +168,136 @@ QPushButton:hover {
      <string>Exit</string>
     </property>
    </widget>
-   <widget class="QLabel" name="csstatementwdw_lbl_balanceheading">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>288</width>
-      <height>36</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>18</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Your current balance:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="csstatementwdw_lbl_balanceshow">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>80</y>
-      <width>51</width>
-      <height>36</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>18</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>0 €</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="csstatementwdw_tbl_statement">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>150</y>
+      <x>30</x>
+      <y>140</y>
       <width>551</width>
       <height>381</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(240, 239, 235);</string>
+    <property name="minimumSize">
+     <size>
+      <width>551</width>
+      <height>0</height>
+     </size>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(202, 240, 248);</string>
+    </property>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>43</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>136</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>28</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>30</number>
+    </attribute>
     <column>
      <property name="text">
       <string>Transaction Date</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
      </property>
     </column>
     <column>
      <property name="text">
       <string>Transaction Type</string>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
     </column>
     <column>
      <property name="text">
       <string>Amount</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
      </property>
     </column>
     <column>
      <property name="text">
       <string>Balance</string>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
     </column>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>80</y>
-      <width>91</width>
-      <height>21</height>
+      <x>30</x>
+      <y>75</y>
+      <width>551</width>
+      <height>51</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="csstatementwdw_lbl_balanceheading">
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Your current balance:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="csstatementwdw_lbl_balanceshow">
+       <property name="font">
+        <font>
+         <family>.AppleSystemUIFont</family>
+         <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0 €</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -232,30 +305,13 @@ QPushButton:hover {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>588</width>
-     <height>26</height>
+     <width>600</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>csstatementwdw_btn_exit</sender>
-   <signal>clicked()</signal>
-   <receiver>customer_statement_window</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>387</x>
-     <y>549</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>434</x>
-     <y>570</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

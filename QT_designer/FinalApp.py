@@ -15,13 +15,12 @@ class Main_Window(QMainWindow, Ui_open_window):
         self.setupUi(self)
         self.openwdw_btn_CSLogin.clicked.connect(self.cslogin)
         self.openwdw_btn_ADLogin.clicked.connect(self.adlogin)
+        self.openwdw_btn_exit.clicked.connect(self.close_w)
     def adlogin(self):
         self.admin = ADPreLogin()
         widget.addWidget(self.admin)
         widget.setCurrentIndex(widget.currentIndex()+1)
         self.admin.show() 
-
-        self.openwdw_btn_exit.clicked.connect(self.close_w)
     def cslogin(self):
         self.customer = CsLogin()
         widget.addWidget(self.customer)
@@ -36,6 +35,7 @@ class ADPreLogin(QMainWindow, Ui_admin_window):
         self.setupUi(self)
         self.adminwdw_btn_login.clicked.connect(self.adafterlogin)
         self.adminwdw_btn_returnmain.clicked.connect(self.return_back)
+        self.adminwdw_btn_exit.clicked.connect(self.close_w)
     def adafterlogin(self):
         AdminID = self.adminwdw_linedit_ADid.text()
         ADpassword = self.adminwdw_linedit_ADpassword.text()
@@ -57,6 +57,8 @@ class ADPreLogin(QMainWindow, Ui_admin_window):
         main = Main_Window()
         widget.addWidget(main)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    def close_w(self):
+        sys.exit()  
 
 class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
     def __init__(self):
@@ -68,6 +70,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_linedit_email.clear)
         self.admincswdw_btn_create.clicked.connect(self.admincswdw_spinBox_balance.clear)
         self.admincswdw_btn_returnmain.clicked.connect(self.return_back)
+        self.admincswdw_btn_exit.clicked.connect(self.close_w)
 
     def createcustomer(self):
         CustomerID = random.randint(100000,999999)
@@ -105,16 +108,16 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
             ADlogin = ADPreLogin()
             widget.addWidget(ADlogin)
             widget.setCurrentIndex(widget.currentIndex()+1)
+    def close_w(self):
+        sys.exit()  
 
 class CsLogin(QMainWindow,Ui_customer_login_window):
     def __init__(self):
         super(CsLogin, self).__init__()
         self.setupUi(self)
         self.csloginwdw_btn_login.clicked.connect(self.csafterlogin)  
-
-        self.csloginwdw_btn_exit.clicked.connect(self.close_l)
         self.csloginwdw_btn_returnmain.clicked.connect(self.return_back)
-        #self.csloginwdw_btn_returnmain.clicked.connect(Ui_customer_login_window.close)
+        self.csloginwdw_btn_exit.clicked.connect(self.close_w)
 
     def csafterlogin(self):
         self.CsId = self.csloginwdw_linedit_ADid.text()  
@@ -158,8 +161,8 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
             widget.addWidget(main)
             widget.setCurrentIndex(widget.currentIndex()+1)
 
-    def close_l(self):
-        sys.exit            
+    def close_w(self):
+        sys.exit()            
 
 class CSMain(QMainWindow, Ui_customer_main_window):
     def __init__(self):
@@ -182,6 +185,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         self.csmainwdw_btn_deposit.clicked.connect(self.deposit)
         self.csmainwdw_btn_returnmain.clicked.connect(self.return_back)
         self.csmainwdw_btn_statement.clicked.connect(self.show_statement)
+        self.csmainwdw_btn_exit.clicked.connect(self.close_w)
         
     def take_balance(self):
         file = f"QT_designer/customer_database/{self.ID}.csv"
@@ -212,6 +216,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
                 self.csmainwdw_lbl_resultmessage.setText("Please enter an amount..")
         except:
             print("error")
+
     def get_cash(self):
         self.take_balance()
         try: 
@@ -258,12 +263,16 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         self.csstatement.show()
         self.take_balance()
         self.csstatement.csstatementwdw_lbl_balanceshow.setText(f"{self.balance} €")
+
+    def close_w(self):
+        sys.exit()  
         
 class CSinfo(QMainWindow, Ui_customer_statement_window):
     def __init__(self):
         super(CSinfo, self).__init__()
         self.setupUi(self)
         self.csstatementwdw_btn_returnmain.clicked.connect(self.return_back)
+        self.csstatementwdw_btn_exit.clicked.connect(self.close_w)
 
     def return_back(self):
         csmain = CSMain()
@@ -271,14 +280,17 @@ class CSinfo(QMainWindow, Ui_customer_statement_window):
         widget.setCurrentIndex(widget.currentIndex()+1)
         csmain.csmainwdw_lbl_CSID_show.setText(csmain.ID)
 
+    def close_w(self):
+        sys.exit()  
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     mainwindow = Main_Window()
     widget = QtWidgets.QStackedWidget()
     
     widget.addWidget(mainwindow)
-    widget.setFixedHeight(600)
-    widget.setFixedWidth(500)
+    widget.setFixedHeight(700)
+    widget.setFixedWidth(600)
     widget.show()
 
     try:

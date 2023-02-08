@@ -9,14 +9,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>588</width>
-    <height>687</height>
+    <width>600</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>480</width>
-    <height>600</height>
+    <width>600</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>700</height>
    </size>
   </property>
   <property name="contextMenuPolicy">
@@ -38,16 +44,16 @@
    <widget class="QLabel" name="csmainwdw_lbl_heading">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>581</width>
-      <height>91</height>
+      <x>50</x>
+      <y>10</y>
+      <width>491</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>26</pointsize>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>32</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -62,11 +68,23 @@
    <widget class="QPushButton" name="csmainwdw_btn_getcash">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>110</x>
       <y>330</y>
-      <width>181</width>
-      <height>51</height>
+      <width>180</width>
+      <height>50</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>180</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>180</width>
+      <height>50</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -96,11 +114,23 @@ QPushButton:hover {
    <widget class="QPushButton" name="csmainwdw_btn_returnmain">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>520</y>
-      <width>131</width>
-      <height>51</height>
+      <x>110</x>
+      <y>540</y>
+      <width>180</width>
+      <height>70</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>180</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>180</width>
+      <height>70</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -134,11 +164,23 @@ QPushButton:hover {
    <widget class="QPushButton" name="csmainwdw_btn_exit">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>520</y>
-      <width>131</width>
-      <height>51</height>
+      <x>310</x>
+      <y>540</y>
+      <width>180</width>
+      <height>70</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>180</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>180</width>
+      <height>70</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -169,42 +211,26 @@ QPushButton:hover {
      <string>Exit</string>
     </property>
    </widget>
-   <widget class="QLabel" name="csmainwdw_lbl_balanceshow">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>210</y>
-      <width>181</width>
-      <height>36</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-   </widget>
    <widget class="QPushButton" name="csmainwdw_btn_deposit">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>310</x>
       <y>330</y>
-      <width>181</width>
-      <height>51</height>
+      <width>180</width>
+      <height>50</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>180</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>180</width>
+      <height>50</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -234,8 +260,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="csmainwdw_btn_moneyup">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>270</y>
+      <x>440</x>
+      <y>260</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -269,8 +295,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="csmainwdw_btn_moneydown">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>270</y>
+      <x>130</x>
+      <y>260</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -304,14 +330,27 @@ QPushButton:hover {
    <widget class="QSpinBox" name="csmainwdw_spinbox_money">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>270</y>
-      <width>121</width>
-      <height>31</height>
+      <x>230</x>
+      <y>260</y>
+      <width>160</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>24</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="focusPolicy">
      <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 24pt &quot;.AppleSystemUIFont&quot;;
+background-color: rgb(236, 236, 236);</string>
     </property>
     <property name="inputMethodHints">
      <set>Qt::ImhDigitsOnly</set>
@@ -341,10 +380,10 @@ QPushButton:hover {
    <widget class="QPushButton" name="csmainwdw_btn_statement">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>109</x>
       <y>450</y>
-      <width>391</width>
-      <height>51</height>
+      <width>381</width>
+      <height>70</height>
      </rect>
     </property>
     <property name="font">
@@ -372,99 +411,10 @@ QPushButton:hover {
      <string>VIEW BANK STATEMENT</string>
     </property>
    </widget>
-   <widget class="QLabel" name="csmainwdw_lbl_CSname_show">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>121</y>
-      <width>161</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="csmainwdw_lbl_CSID_show">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>168</y>
-      <width>161</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="csmainwdw_lbl_CSname_heading">
-    <property name="geometry">
-     <rect>
-      <x>91</x>
-      <y>121</y>
-      <width>129</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Customer Name:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="csmainwdw_lbl_balanceheading">
-    <property name="geometry">
-     <rect>
-      <x>91</x>
-      <y>216</y>
-      <width>257</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Your current balance:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="csmainwdw_lbl_CSID_heading">
-    <property name="geometry">
-     <rect>
-      <x>91</x>
-      <y>168</y>
-      <width>100</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Customer ID:</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="csmainwdw_lbl_resultmessage">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>110</x>
       <y>390</y>
       <width>381</width>
       <height>33</height>
@@ -485,13 +435,126 @@ QPushButton:hover {
      <string/>
     </property>
    </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>110</y>
+      <width>441</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="csmainwdw_lbl_CSname_heading">
+         <property name="font">
+          <font>
+           <family>.AppleSystemUIFont</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Customer Name:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="csmainwdw_lbl_CSID_heading">
+         <property name="font">
+          <font>
+           <family>.AppleSystemUIFont</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Customer ID:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="csmainwdw_lbl_CSname_show">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="csmainwdw_lbl_CSID_show">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>180</y>
+      <width>441</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="csmainwdw_lbl_balanceheading">
+       <property name="font">
+        <font>
+         <family>.AppleSystemUIFont</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Your current balance:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="csmainwdw_lbl_balanceshow">
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>588</width>
+     <width>600</width>
      <height>21</height>
     </rect>
    </property>
@@ -507,12 +570,12 @@ QPushButton:hover {
    <slot>stepUp()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>339</x>
-     <y>223</y>
+     <x>440</x>
+     <y>281</y>
     </hint>
     <hint type="destinationlabel">
      <x>265</x>
-     <y>223</y>
+     <y>281</y>
     </hint>
    </hints>
   </connection>
@@ -524,27 +587,11 @@ QPushButton:hover {
    <hints>
     <hint type="sourcelabel">
      <x>138</x>
-     <y>225</y>
+     <y>281</y>
     </hint>
     <hint type="destinationlabel">
-     <x>199</x>
-     <y>223</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>csmainwdw_btn_exit</sender>
-   <signal>clicked()</signal>
-   <receiver>customer_main_window</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>371</x>
-     <y>534</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>453</x>
-     <y>565</y>
+     <x>230</x>
+     <y>281</y>
     </hint>
    </hints>
   </connection>
