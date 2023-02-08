@@ -171,9 +171,9 @@ QPushButton:hover {
    <widget class="QTableWidget" name="csstatementwdw_tbl_statement">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>0</x>
       <y>140</y>
-      <width>551</width>
+      <width>601</width>
       <height>381</height>
      </rect>
     </property>
@@ -193,17 +193,17 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">background-color: rgb(202, 240, 248);</string>
     </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>136</number>
-    </attribute>
     <attribute name="horizontalHeaderMinimumSectionSize">
      <number>43</number>
     </attribute>
-    <attribute name="verticalHeaderDefaultSectionSize">
-     <number>30</number>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>136</number>
     </attribute>
     <attribute name="verticalHeaderMinimumSectionSize">
      <number>28</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>30</number>
     </attribute>
     <column>
      <property name="text">
@@ -261,9 +261,9 @@ QPushButton:hover {
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>75</y>
-      <width>551</width>
+      <width>561</width>
       <height>51</height>
      </rect>
     </property>
@@ -313,7 +313,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

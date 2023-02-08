@@ -260,7 +260,7 @@ QPushButton:hover {
    <widget class="QPushButton" name="csmainwdw_btn_moneyup">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>430</x>
       <y>260</y>
       <width>41</width>
       <height>41</height>
@@ -290,6 +290,12 @@ QPushButton:hover {
     </property>
     <property name="text">
      <string>+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="csmainwdw_btn_moneydown">
@@ -330,7 +336,7 @@ QPushButton:hover {
    <widget class="QSpinBox" name="csmainwdw_spinbox_money">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>220</x>
       <y>260</y>
       <width>160</width>
       <height>40</height>
@@ -380,9 +386,9 @@ background-color: rgb(236, 236, 236);</string>
    <widget class="QPushButton" name="csmainwdw_btn_statement">
     <property name="geometry">
      <rect>
-      <x>109</x>
+      <x>89</x>
       <y>450</y>
-      <width>381</width>
+      <width>421</width>
       <height>70</height>
      </rect>
     </property>
@@ -414,9 +420,9 @@ QPushButton:hover {
    <widget class="QLabel" name="csmainwdw_lbl_resultmessage">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>50</x>
       <y>390</y>
-      <width>381</width>
+      <width>501</width>
       <height>33</height>
      </rect>
     </property>
@@ -434,13 +440,16 @@ QPushButton:hover {
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>50</x>
       <y>80</y>
-      <width>441</width>
+      <width>491</width>
       <height>83</height>
      </rect>
     </property>
@@ -483,8 +492,16 @@ QPushButton:hover {
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLabel" name="csmainwdw_lbl_CSname_show">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -493,8 +510,16 @@ QPushButton:hover {
        </item>
        <item>
         <widget class="QLabel" name="csmainwdw_lbl_CSID_show">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -508,9 +533,9 @@ QPushButton:hover {
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>50</x>
       <y>180</y>
-      <width>441</width>
+      <width>491</width>
       <height>51</height>
      </rect>
     </property>
@@ -561,7 +586,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
