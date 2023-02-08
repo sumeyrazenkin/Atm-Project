@@ -42,7 +42,7 @@ class ADPreLogin(QMainWindow, Ui_admin_window):
         if len(AdminID) == 0 or len(ADpassword) == 0:
             self.adminwdw_lbl_warning.setText("Please fill the required fields!")
         else:
-            file = r"QT_designer/AdminLogInfo/admin.json"
+            file = r"C:\Users\musab\OneDrive\Belgeler\GitHub\Atm-Project\QT_designer\AdminLogInfo\admin.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
             for admin in pyfile:
