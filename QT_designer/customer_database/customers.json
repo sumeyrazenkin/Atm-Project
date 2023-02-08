@@ -22,5 +22,13 @@
     "Password": "1",
     "Opening Balance": "0\u20ac",
     "Current Balance": "0\u20ac"
+  },
+  {
+    "Customer_ID": "645929",
+    "Name": "musab",
+    "Email": "musab@gmail.com",
+    "Password": "1",
+    "Opening Balance": "100\u20ac",
+    "Current Balance": "100\u20ac"
   }
 ]

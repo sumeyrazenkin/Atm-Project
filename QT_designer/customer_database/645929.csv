@@ -1,0 +1,4 @@
+Date,Transaction Type,Amount,Current Balance
+"08/02/2023, 19:43:21",New Account,100€,100€
+"08/02/2023, 19:43:35",Logged in,N/A,100€
+"08/02/2023, 19:43:43",Deposit,200€,300€
