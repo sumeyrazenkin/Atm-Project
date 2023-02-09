@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import *
-import json, csv, datetime, random, sys
+import json, csv, datetime, random, sys, os
 
 from Ui_main_window import *
 from Ui_customer_login_window import *
@@ -8,6 +8,7 @@ from Ui_admin_createCS_window import *
 from Ui_admin_window import *
 from Ui_customer_statement_window import *
 
+m = os.getcwd()
 
 class Main_Window(QMainWindow, Ui_open_window):
     def __init__(self):
@@ -42,7 +43,8 @@ class ADPreLogin(QMainWindow, Ui_admin_window):
         if len(AdminID) == 0 or len(ADpassword) == 0:
             self.adminwdw_lbl_warning.setText("Please fill the required fields!")
         else:
-            file = r"C:\Users\musab\OneDrive\Belgeler\GitHub\Atm-Project\QT_designer\AdminLogInfo\admin.json"
+             
+            file = f"{m}/QT_designer/AdminLogInfo/admin.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
             for admin in pyfile:
@@ -82,7 +84,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
         if  len(Name) == 0 or len(Email) == 0 or len(Password) == 0:
             self.admincswdw_lbl_result.setText("Please fill all the fields!")
         if CustomerID and Name and Email and Password:
-            file = "QT_designer/customer_database/customers.json"
+            file = f"{m}/QT_designer/customer_database/customers.json"
             customers = {}
             with open (file, "r") as f:
                 pyfile = json.load(f)
@@ -103,7 +105,7 @@ class ADAfterLogin(QMainWindow, Ui_admin_CScreate_window):
                 pyfile.append(customers)
             with open (file, "w") as f:
                 json.dump(pyfile, f, indent=2)
-            with open(f'QT_designer/customer_database/{CustomerID}.csv',"w", newline="\n") as x:
+            with open(f'{m}/QT_designer/customer_database/{CustomerID}.csv',"w", newline="\n") as x:
                 statement = csv.writer(x)
                 statement.writerow(["Date", "Transaction Type", "Amount", "Current Balance"])
                 statement.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"New Account", CurrentBalance, CurrentBalance])   # type: ignore
@@ -128,7 +130,7 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
         if len(self.CsId) == 0 or len(self.CsPs) == 0:
             self.csloginwdw_lbl_warning.setText("Please fill the required fields!")
         else:
-            file = r"QT_designer/customer_database/customers.json"
+            file = f"{m}/QT_designer/customer_database/customers.json"
             with open (file, "r") as f:
                 pyfile = json.load(f)
             for customer in pyfile:    
@@ -136,7 +138,7 @@ class CsLogin(QMainWindow,Ui_customer_login_window):
                     try:
                         CSMain.ID = self.CsId                        
                         print("Successfully logged in")
-                        file = f"QT_designer/customer_database/{self.CsId}.csv"
+                        file = f"{m}/QT_designer/customer_database/{self.CsId}.csv"
                         with open (file, "r") as f:
                             reader = csv.reader(f)
                             all_rows = list(reader)
@@ -175,7 +177,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         self.amount = self.csmainwdw_spinbox_money.value()
         self.ID
         
-        file = f"QT_designer/customer_database/{self.ID}.csv"
+        file = f"{m}/QT_designer/customer_database/{self.ID}.csv"
         with open (file, "r") as f:
             reader = csv.reader(f)
             all_rows = list(reader)
@@ -191,7 +193,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         self.csmainwdw_btn_exit.clicked.connect(self.close_w)
         
     def take_balance(self):
-        file = f"QT_designer/customer_database/{self.ID}.csv"
+        file = f"{m}/QT_designer/customer_database/{self.ID}.csv"
         with open (file, "r") as f:
             reader = csv.reader(f)
             all_rows = list(reader)
@@ -208,7 +210,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
                 self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
                 self.csmainwdw_lbl_resultmessage.setText("Successful deposit to the account")
 
-                file = f"QT_designer/customer_database/{self.ID}.csv"
+                file = f"{m}/QT_designer/customer_database/{self.ID}.csv"
                 with open (file, "a", newline="\n") as f:
                     writer = csv.writer(f)
                     writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Deposit", str(self.csmainwdw_spinbox_money.value())+"€", str(b)+"€"])
@@ -230,7 +232,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
                     self.csmainwdw_lbl_resultmessage.setStyleSheet("color: rgb(0, 84, 147);")
                     self.csmainwdw_lbl_resultmessage.setText("Successful withdraw from the account")
                     
-                    file = f"QT_designer/customer_database/{self.ID}.csv"
+                    file = f"{m}/QT_designer/customer_database/{self.ID}.csv"
                     with open (file, "a", newline="\n") as f:
                         writer = csv.writer(f)
                         writer.writerow([datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"),"Withdraw", str(self.csmainwdw_spinbox_money.value())+"€", str(c)+"€"])
@@ -254,7 +256,7 @@ class CSMain(QMainWindow, Ui_customer_main_window):
         self.csstatement = CSinfo()
         widget.addWidget(self.csstatement)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        file = f"QT_designer/customer_database/{self.ID}.csv"
+        file = f"{m}/QT_designer/customer_database/{self.ID}.csv"
         with open (file, "r") as f:
             reader = csv.reader(f)
             data = [row for row in reader]
@@ -282,7 +284,7 @@ class CSinfo(QMainWindow, Ui_customer_statement_window):
         widget.addWidget(csmain)
         widget.setCurrentIndex(widget.currentIndex()+1)
         csmain.csmainwdw_lbl_CSID_show.setText(csmain.ID)
-        f = open("QT_designer/customer_database/customers.json")
+        f = open(f"{m}/QT_designer/customer_database/customers.json")
         data = json.load(f)
         for customer in data:
             if str(csmain.ID) in customer["Customer_ID"]:
@@ -306,3 +308,4 @@ if __name__ == "__main__":
 
     except:
         print("Exiting")
+    
