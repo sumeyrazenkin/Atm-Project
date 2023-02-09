@@ -282,6 +282,11 @@ class CSinfo(QMainWindow, Ui_customer_statement_window):
         widget.addWidget(csmain)
         widget.setCurrentIndex(widget.currentIndex()+1)
         csmain.csmainwdw_lbl_CSID_show.setText(csmain.ID)
+        f = open("QT_designer/customer_database/customers.json")
+        data = json.load(f)
+        for customer in data:
+            if str(csmain.ID) in customer["Customer_ID"]:
+                csmain.csmainwdw_lbl_CSname_show.setText(customer["Name"])
 
     def close_w(self):
         sys.exit()  
