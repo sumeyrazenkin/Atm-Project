@@ -1,34 +1,3 @@
 [
-  {
-    "Customer_ID": "121253",
-    "Name": "Melike Kaya",
-    "Email": "melikekaya@gmail.com",
-    "Password": "1",
-    "Opening Balance": "300\u20ac",
-    "Current Balance": "300\u20ac"
-  },
-  {
-    "Customer_ID": "583904",
-    "Name": "sdf",
-    "Email": "fsd",
-    "Password": "1",
-    "Opening Balance": "300\u20ac",
-    "Current Balance": "300\u20ac"
-  },
-  {
-    "Customer_ID": "867441",
-    "Name": "lk",
-    "Email": "sdf",
-    "Password": "1",
-    "Opening Balance": "0\u20ac",
-    "Current Balance": "0\u20ac"
-  },
-  {
-    "Customer_ID": "645929",
-    "Name": "musab",
-    "Email": "musab@gmail.com",
-    "Password": "1",
-    "Opening Balance": "100\u20ac",
-    "Current Balance": "100\u20ac"
-  }
+
 ]

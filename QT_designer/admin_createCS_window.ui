@@ -146,7 +146,7 @@ QPushButton:hover {
    </string>
     </property>
     <property name="text">
-     <string>Back</string>
+     <string>Log Out</string>
     </property>
    </widget>
    <widget class="QPushButton" name="admincswdw_btn_exit">
